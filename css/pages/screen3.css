@@ -41,36 +41,43 @@
         -o-transition: .5s ease-in-out;
         filter: grayscale(100%);
         transition: .5s ease-in-out; }
-      .screen3 .screen3__container .screen3__photos .screen3__title {
-        font-family: "Gagalin";
-        font-size: 14px;
-        font-weight: 100;
-        color: #fff;
-        padding: 25px 0 20px 0;
-        text-align: left; }
-      .screen3 .screen3__container .screen3__photos .screen3__text {
-        font-family: "Ubuntu";
-        font-weight: 100;
-        font-size: 14px;
-        line-height: 1.71;
-        color: #fff;
-        text-align: left;
-        padding-bottom: 20px; }
-      .screen3 .screen3__container .screen3__photos .screen3__more {
-        display: inline-block;
-        width: 110px;
-        height: 35px;
-        background: #2f3234;
-        border-radius: 5px;
-        color: #fff;
-        font-family: "Ubuntu";
-        font-weifgt: 200;
-        font-size: 13px;
-        line-height: 35px;
-        text-align: center;
-        text-transform: uppercase;
-        -webkit-transition: .5s;
-        -o-transition: .5s;
-        transition: .5s; }
-        .screen3 .screen3__container .screen3__photos .screen3__more:hover {
-          background: #474c4f; }
+      .screen3 .screen3__container .screen3__photos .screen3__review {
+        opacity: 0;
+        -webkit-transition: .7s;
+        -o-transition: .7s;
+        transition: .7s; }
+        .screen3 .screen3__container .screen3__photos .screen3__review:hover {
+          opacity: 1; }
+        .screen3 .screen3__container .screen3__photos .screen3__review .screen3__title {
+          font-family: "Gagalin";
+          font-size: 14px;
+          font-weight: 100;
+          color: #fff;
+          padding: 25px 0 20px 0;
+          text-align: left; }
+        .screen3 .screen3__container .screen3__photos .screen3__review .screen3__text {
+          font-family: "Ubuntu";
+          font-weight: 100;
+          font-size: 14px;
+          line-height: 1.71;
+          color: #fff;
+          text-align: left;
+          padding-bottom: 20px; }
+        .screen3 .screen3__container .screen3__photos .screen3__review .screen3__more {
+          display: inline-block;
+          width: 110px;
+          height: 35px;
+          background: #2f3234;
+          border-radius: 5px;
+          color: #fff;
+          font-family: "Ubuntu";
+          font-weifgt: 200;
+          font-size: 13px;
+          line-height: 35px;
+          text-align: center;
+          text-transform: uppercase;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s; }
+          .screen3 .screen3__container .screen3__photos .screen3__review .screen3__more:hover {
+            background: #474c4f; }

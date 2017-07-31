@@ -60,36 +60,42 @@ $grey: #2f3234
         filter: grayscale(100%)
         transition: .5s ease-in-out
 
-      .screen3__title
-        font-family: "Gagalin"
-        font-size: 14px
-        font-weight: 100
-        color: $white
-        padding: 25px 0 20px 0
-        text-align: left
-          
-      .screen3__text
-        font-family: "Ubuntu"
-        font-weight: 100
-        font-size: 14px
-        line-height: 1.71
-        color: $white
-        text-align: left
-        padding-bottom: 20px
-
-      .screen3__more
-        display: inline-block
-        width: 110px
-        height: 35px
-        background: $grey
-        border-radius: 5px
-        color: $white
-        font-family: "Ubuntu"         
-        font-weifgt: 200
-        font-size: 13px
-        line-height: 35px
-        text-align: center
-        text-transform: uppercase
-        transition: .5s
+      .screen3__review
+        opacity: 0
+        transition: .7s
         &:hover
-          background: lighten($grey, 10%)
+          opacity: 1
+
+        .screen3__title
+          font-family: "Gagalin"
+          font-size: 14px
+          font-weight: 100
+          color: $white
+          padding: 25px 0 20px 0
+          text-align: left
+          
+        .screen3__text
+          font-family: "Ubuntu"
+          font-weight: 100
+          font-size: 14px
+          line-height: 1.71
+          color: $white
+          text-align: left
+          padding-bottom: 20px
+
+        .screen3__more
+          display: inline-block
+          width: 110px
+          height: 35px
+          background: $grey
+          border-radius: 5px
+          color: $white
+          font-family: "Ubuntu"         
+          font-weifgt: 200
+          font-size: 13px
+          line-height: 35px
+          text-align: center
+          text-transform: uppercase
+          transition: .5s
+          &:hover
+            background: lighten($grey, 10%)

@@ -76,7 +76,7 @@
     .screen1 .screen1__container .content {
       text-align: left; }
     .screen1 .screen1__container .content__picture {
-      background: url("../../images/steam_burger.png") 59px -11px no-repeat;
+      background: url("../../images/steam_burger.png") 20px 50px no-repeat;
       display: inline-block;
       width: 50%;
       height: 450px;
