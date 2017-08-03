@@ -1,0 +1,11 @@
+// circle
+@mixin circle($width, $color)
+  width: $width
+  height: $width
+  border-radius: $width/2
+  background-color: $color
+
+// convert px to vw
+@function get-vw($target) 
+  $vw-context: (1000*.01) * 1px
+  @return ($target/$vw-context) * 1vw

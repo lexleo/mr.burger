@@ -1,0 +1,72 @@
+// Reviews
+
+.reviews
+  display: flex
+
+  .reviews__list
+    display: flex
+    flex-wrap: wrap
+    height: 100%
+
+    .reviews__item
+      flex-basis: 25%
+      text-align: left
+      &:hover .reviews__review
+        transform: scale(1);
+        opacity: 1
+      
+      .reviews__photo
+        width: 100%
+        height: 100%
+        background-size: cover
+        background-position: 50% 50%
+        background-repeat: no-repeat
+
+    .greyscale 
+      filter: grayscale(100%)
+      transition: .5s ease-in-out
+
+    .reviews__review
+      width: 100%
+      height: 100%
+      background-color: rgba(0, 1, 5, .7)
+      padding: 50px 30px 50px 20px    
+      opacity: 0
+      transition: .5s
+      transform: scale(.7)
+      overflow: hidden
+
+      .reviews__title
+        font-family: "Gagalin"
+        font-size: 14px
+        font-weight: 100
+        color: $white
+        margin-bottom: 20px
+        text-align: left
+        
+      .reviews__text
+        font-family: "Ubuntu"
+        font-weight: 100
+        font-size: 14px
+        line-height: 1.71
+        color: $white
+        text-align: left
+        padding-bottom: 20px
+
+      .reviews__more
+        display: inline-block
+        width: 110px
+        height: 35px
+        background: $grey
+        border-radius: 5px
+        color: $white
+        font-family: "Ubuntu"         
+        font-weifgt: 200
+        font-size: 13px
+        line-height: 35px
+        text-align: center
+        text-transform: uppercase
+        transition: .5s
+        cursor: pointer
+        &:hover
+          background: lighten($grey, 10%)
