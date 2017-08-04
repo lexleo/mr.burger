@@ -7,5 +7,6 @@
 
 // convert px to vw
 @function get-vw($target) 
-  $vw-context: (1000*.01) * 1px
-  @return ($target/$vw-context) * 1vw
+  $viewport-width: 1000 //average viewport width
+  $context: ($viewport-width*.01) * 1px //1% of viewport-width in px
+  @return ($target/$context) * 1vw // result in vw
