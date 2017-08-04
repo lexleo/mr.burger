@@ -1,37 +1,37 @@
 @import url(layout/normalize.min.css);
 @font-face {
   font-family: 'Gagalin';
-  src: url("../../fonts/Gagalin-Regular.woff") format("woff");
+  src: url("../fonts/Gagalin-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Lifehack';
-  src: url("../../fonts/Lifehack-Medium.woff") format("woff");
+  src: url("../fonts/Lifehack-Medium.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../../fonts/Ubuntu.woff") format("woff");
+  src: url("../fonts/Ubuntu.woff") format("woff");
   font-weight: 200;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../../fonts/Ubuntu-Bold.woff") format("woff");
+  src: url("../fonts/Ubuntu-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../../fonts/Ubuntu-Light.woff") format("woff");
+  src: url("../fonts/Ubuntu-Light.woff") format("woff");
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../../fonts/Ubuntu-Medium.woff") format("woff");
+  src: url("../fonts/Ubuntu-Medium.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 
@@ -109,7 +109,7 @@ li {
   cursor: pointer; }
 
 .heading {
-  background: url("../../images/screen1_bg.jpg") center center no-repeat;
+  background: url("../images/heading_bg.jpg") center center no-repeat;
   background-size: cover; }
   .heading .heading__wrapper {
     width: 960px;
@@ -187,7 +187,7 @@ li {
     .heading .heading__wrapper .content {
       text-align: left; }
       .heading .heading__wrapper .content .content__picture {
-        background: url("../../images/steam_burger.png") 20px 50px no-repeat;
+        background: url("../images/steam_burger.png") 20px 50px no-repeat;
         display: inline-block;
         width: 50%;
         height: 450px;
@@ -217,7 +217,7 @@ li {
         padding-top: 25px; }
 
 .best {
-  background: url("../../images/screen2_bg.jpg") center center no-repeat;
+  background: url("../images/best_bg.jpg") center center no-repeat;
   background-size: cover; }
   .best .best__wrapper {
     display: inline-block;
@@ -247,11 +247,11 @@ li {
           display: inline-block;
           text-align: center; }
         .best .best__content .best__row .best__col .best__meat {
-          background: url("../../images/icons/meat.svg") 50% 50% no-repeat; }
+          background: url("../images/icons/meat.svg") 50% 50% no-repeat; }
         .best .best__content .best__row .best__col .best__hand {
-          background: url("../../images/icons/hand.svg") 50% 50% no-repeat; }
+          background: url("../images/icons/hand.svg") 50% 50% no-repeat; }
         .best .best__content .best__row .best__col .best__natural {
-          background: url("../../images/icons/natural.svg") 50% 50% no-repeat; }
+          background: url("../images/icons/natural.svg") 50% 50% no-repeat; }
         .best .best__content .best__row .best__col .best__title {
           font-family: "Lifehack";
           font-size: 24px;
