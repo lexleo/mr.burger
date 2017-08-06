@@ -101,20 +101,12 @@ li {
   .pagination__list:hover {
     color: #f9b43b; }
 
-.next-screen {
-  position: fixed;
-  left: 48.8vw;
-  bottom: 5%;
-  text-align: center;
-  cursor: pointer; }
-
 .heading {
   background: url("../images/heading_bg.jpg") center center no-repeat;
   background-size: cover; }
   .heading .heading__wrapper {
     width: 960px;
-    display: inline-block;
-    position: relative; }
+    display: inline-block; }
     .heading .heading__wrapper .header {
       display: inline-block;
       width: 960px;
@@ -215,6 +207,11 @@ li {
         letter-spacing: -1px;
         line-height: 0.9;
         padding-top: 25px; }
+    .heading .heading__wrapper .next-screen-arrow {
+      position: absolute;
+      left: 50vw;
+      bottom: 1.5vw;
+      cursor: pointer; }
 
 .best {
   background: url("../images/best_bg.jpg") center center no-repeat;
@@ -333,7 +330,7 @@ li {
         display: inline-block;
         width: 110px;
         height: 35px;
-        background: #2f3234;
+        background: #474c4f;
         border-radius: 5px;
         color: #fff;
         font-family: "Ubuntu";
@@ -347,4 +344,4 @@ li {
         transition: .5s;
         cursor: pointer; }
         .reviews .reviews__list .reviews__review .reviews__more:hover {
-          background: #474c4f; }
+          background: #2f3234; }
