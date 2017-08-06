@@ -37,21 +37,19 @@
       overflow: hidden
 
       .reviews__title
-        font-family: "Gagalin"
         font-size: 14px
-        font-weight: 100
         color: $white
         margin-bottom: 20px
         text-align: left
+        @include gagalin()
         
       .reviews__text
-        font-family: "Ubuntu"
-        font-weight: 100
         font-size: 14px
         line-height: 1.71
         color: $white
         text-align: left
         padding-bottom: 20px
+        @include ubuntu(light)
 
       .reviews__more
         display: inline-block
@@ -60,13 +58,12 @@
         background: $grey
         border-radius: 5px
         color: $white
-        font-family: "Ubuntu"         
-        font-weifgt: 200
         font-size: 13px
         line-height: 35px
         text-align: center
         text-transform: uppercase
         transition: .5s
         cursor: pointer
+        @include ubuntu(medium)
         &:hover
           background: darken($grey, 10%)

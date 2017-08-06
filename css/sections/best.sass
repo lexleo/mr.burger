@@ -9,11 +9,11 @@
     width: 1130px
 
   .best__main-title
-    font-family: "Gagalin"
     font-size: 72px
     color: $black
     text-align: center
     padding-top: 50px
+    @include gagalin()
 
   .best__content
     width: 1130px
@@ -49,15 +49,15 @@
 
 
         .best__title
-          font-family: "Lifehack"
           font-size: 24px
           margin-top: 22px
           line-height: 1.2
+          @include lifehack()
 
         .best__text
-          font-family: "Ubuntu"
           font-size: 14px
           font-weight: 100
           margin-top: 15px
           padding-left: 50px
           text-align: left
+          @include ubuntu(light)

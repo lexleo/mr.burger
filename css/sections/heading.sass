@@ -14,9 +14,8 @@
       margin: 0
       padding: 0
       text-align: left
-      font-family: 'Ubuntu'          
       font-size: 13px      
-      font-weight: 300      
+      @include ubuntu('medium')      
 
       .header__logo
         display: inline-block
@@ -97,21 +96,22 @@
       .content__title
         color: $yellow
         text-transform: uppercase
-        font-family: 'Gagalin'
         font-size: 74px
         padding-top: 17px
         letter-spacing: -1.5px
         overflow: hidden
         line-height: 1.2        
+        @include gagalin()
+
       
       .content__subtitle
         color: $white
-        font-family: 'Lifehack'
         font-size: 64px
         margin: 0
         letter-spacing: -1px
         line-height: 0.9
         padding-top: 25px
+        @include lifehack()
     
     .next-screen-arrow
       position: absolute

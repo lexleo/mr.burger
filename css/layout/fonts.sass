@@ -14,8 +14,20 @@
 
 @font-face 
   font-family: 'Ubuntu'
+  src: url('../fonts/Ubuntu-Light.woff') format('woff')
+  font-weight: 100
+  font-style: normal
+
+@font-face 
+  font-family: 'Ubuntu'
   src: url('../fonts/Ubuntu.woff') format('woff')
   font-weight: 200
+  font-style: normal
+
+@font-face 
+  font-family: 'Ubuntu'
+  src: url('../fonts/Ubuntu-Medium.woff') format('woff')
+  font-weight: 300
   font-style: normal
 
 @font-face 
@@ -24,15 +36,28 @@
   font-weight: bold
   font-style: normal
 
-@font-face 
-  font-family: 'Ubuntu'
-  src: url('../fonts/Ubuntu-Light.woff') format('woff')
-  font-weight: 100
-  font-style: normal
 
-@font-face 
-  font-family: 'Ubuntu'
-  src: url('../fonts/Ubuntu-Medium.woff') format('woff')
-  font-weight: 300
-  font-style: normal
+// Fonts mixins
+
+@mixin ubuntu($style: light)
+	font-family: 'Ubuntu', Helvetica, sans-serif
+
+	@if $style == light 
+		font-weight: 100
+	
+	@if $style == regular
+		font-weight: 200
+	
+	@if $style == medium
+		font-weight: 300
+	
+	@if $style == bold
+		font-weight: bold
+
+@mixin gagalin()
+	font-family: 'Gagalin', Helvetica, sans-serif
+
+@mixin lifehack() 
+	font-family: 'Lifehack'
+
 

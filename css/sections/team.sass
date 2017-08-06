@@ -1,0 +1,92 @@
+.team 
+  background: url('../images/team_bg.jpg') center center no-repeat
+  background-size: cover
+  position: relative
+
+.team__right-block
+  background: rgba($black, .8)
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  width: 50%
+  display: flex
+  align-items: flex-start
+  justify-content: center
+
+
+  .team__content 
+    width: 70%
+
+  .team__title
+    color: $yellow
+    @include gagalin()
+    font-size: 72px
+    margin-top: 15%
+    margin-bottom: 30%
+
+  .team-acco__title 
+    font-size: 14px
+    color: #fff
+    margin-bottom: 10px
+    display: flex
+    align-items: center
+    @include gagalin()
+
+    &:before 
+      content: ""
+      width: 0px
+      height: 0px
+      border: 6px solid transparent
+      border-top-color: $yellow
+      border-bottom: none
+      margin-right: 10px
+  
+
+.team-acco__item 
+  margin-bottom: 20px
+
+  &.active 
+    .team-acco__content 
+      height: auto
+    
+
+    .team-acco__title 
+      color: $yellow
+      
+      &:before 
+        transform: rotate(180deg)
+      
+.team-acco__content 
+  display: flex
+  overflow: hidden
+  height: 0
+
+
+.team-acco__position 
+  color: $white
+  font-size: 14px
+  @include ubuntu(bold)  
+  margin-bottom: 10px
+
+.team-acco__desc-text 
+  color: $white
+  @include ubuntu(light)
+  padding-left: 20px
+  font-size: 14px
+  text-align: left
+
+.team-acco__avatar 
+  width: 100px
+  height: 100px
+  overflow: hidden
+  border-radius: 50%
+  position: relative
+
+.team-acco__avatar-pic 
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  // width: 100%
+  height: 100%
