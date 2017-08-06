@@ -1,19 +1,350 @@
-/* Layout */
+@import url(layout/normalize.min.css);
+@font-face {
+  font-family: 'Gagalin';
+  src: url("../fonts/Gagalin-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 
-@import "layout/normalize.min.css";
-@import "layout/fonts.css";
-@import "layout/base.css";
+@font-face {
+  font-family: 'Lifehack';
+  src: url("../fonts/Lifehack-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/Ubuntu.woff") format("woff");
+  font-weight: 200;
+  font-style: normal; }
 
-/* Components */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/Ubuntu-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
 
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/Ubuntu-Light.woff") format("woff");
+  font-weight: 100;
+  font-style: normal; }
 
-/* Pages content */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/Ubuntu-Medium.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
 
-@import "pages/screen1.css";
-@import "pages/screen2.css";
-@import "pages/screen3.css";
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
 
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Ubuntu';
+  line-height: 1.42; }
 
+ul {
+  padding: 0;
+  margin: 0; }
 
+li {
+  list-style: none; }
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  position: relative; }
+
+.section {
+  text-align: center;
+  min-height: 650px;
+  height: 100vh; }
+
+.pagination__list {
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  position: fixed;
+  top: 88px;
+  right: 5%; }
+  .pagination__list .pagination__item {
+    width: 15px;
+    height: 15px;
+    margin-bottom: 7px;
+    vertical-align: middle;
+    color: #fff;
+    line-height: 12px;
+    font-size: 12px;
+    text-decoration: none;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
+  .pagination__list .pagination__item-active {
+    border: 1px solid #fff;
+    border-radius: 50%; }
+  .pagination__list .pagination__link {
+    text-decoration: none;
+    color: #fff;
+    padding-bottom: 15px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+  .pagination__list:hover {
+    color: #f9b43b; }
+
+.next-screen {
+  position: fixed;
+  left: 48.8vw;
+  bottom: 5%;
+  text-align: center;
+  cursor: pointer; }
+
+.heading {
+  background: url("../images/heading_bg.jpg") center center no-repeat;
+  background-size: cover; }
+  .heading .heading__wrapper {
+    width: 960px;
+    display: inline-block;
+    position: relative; }
+    .heading .heading__wrapper .header {
+      display: inline-block;
+      width: 960px;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      font-family: 'Ubuntu';
+      font-size: 13px;
+      font-weight: 300; }
+      .heading .heading__wrapper .header .header__logo {
+        display: inline-block;
+        vertical-align: middle;
+        height: 69px;
+        width: 92px;
+        width: 19%; }
+      .heading .heading__wrapper .header .header__content {
+        text-align: right;
+        height: 81px;
+        width: 80%;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+        line-height: 78px; }
+        .heading .heading__wrapper .header .header__content .nav__list {
+          display: inline-block;
+          vertical-align: middle; }
+          .heading .heading__wrapper .header .header__content .nav__list .nav__item {
+            display: inline-block;
+            vertical-align: middle;
+            white-space: nowrap; }
+            .heading .heading__wrapper .header .header__content .nav__list .nav__item:after {
+              display: inline-block;
+              vertical-align: middle;
+              content: ' ';
+              width: 5px;
+              height: 5px;
+              border-radius: 2.5px;
+              background-color: #fff;
+              margin: 0 13px; }
+            .heading .heading__wrapper .header .header__content .nav__list .nav__item:last-child:after {
+              display: none; }
+            .heading .heading__wrapper .header .header__content .nav__list .nav__item .nav__link {
+              text-transform: uppercase;
+              text-decoration: none;
+              color: #fff;
+              -webkit-transition: .5s;
+              -o-transition: .5s;
+              transition: .5s; }
+              .heading .heading__wrapper .header .header__content .nav__list .nav__item .nav__link:hover {
+                color: #f9b43b; }
+        .heading .heading__wrapper .header .header__content .header__order {
+          display: inline-block;
+          width: 97px;
+          height: 35px;
+          vertical-align: middle;
+          color: #fff;
+          margin-left: 15px;
+          text-transform: uppercase;
+          line-height: 35px;
+          text-align: center;
+          background: #e45028;
+          border-radius: 5px;
+          font-size: 13px;
+          cursor: pointer;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s; }
+          .heading .heading__wrapper .header .header__content .header__order:hover {
+            background: #c13c18; }
+    .heading .heading__wrapper .content {
+      text-align: left; }
+      .heading .heading__wrapper .content .content__picture {
+        background: url("../images/steam_burger.png") 20px 50px no-repeat;
+        display: inline-block;
+        width: 50%;
+        height: 450px;
+        vertical-align: middle; }
+      .heading .heading__wrapper .content .content__titles {
+        width: 45%;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        padding-left: 7px; }
+      .heading .heading__wrapper .content .content__title {
+        color: #f9b43b;
+        text-transform: uppercase;
+        font-family: 'Gagalin';
+        font-size: 74px;
+        padding-top: 17px;
+        letter-spacing: -1.5px;
+        overflow: hidden;
+        line-height: 1.2; }
+      .heading .heading__wrapper .content .content__subtitle {
+        color: #fff;
+        font-family: 'Lifehack';
+        font-size: 64px;
+        margin: 0;
+        letter-spacing: -1px;
+        line-height: 0.9;
+        padding-top: 25px; }
+
+.best {
+  background: url("../images/best_bg.jpg") center center no-repeat;
+  background-size: cover; }
+  .best .best__wrapper {
+    display: inline-block;
+    width: 1130px; }
+  .best .best__main-title {
+    font-family: "Gagalin";
+    font-size: 72px;
+    color: #000;
+    text-align: center;
+    padding-top: 50px; }
+  .best .best__content {
+    width: 1130px;
+    padding: 15px;
+    margin-top: 47px;
+    display: inline-block;
+    text-align: center; }
+    .best .best__content .best__row {
+      width: 100%; }
+      .best .best__content .best__row .best__col {
+        display: inline-block;
+        width: 33%;
+        vertical-align: top; }
+        .best .best__content .best__row .best__col .best__img {
+          vertical-align: top;
+          width: 100px;
+          height: 100px;
+          display: inline-block;
+          text-align: center; }
+        .best .best__content .best__row .best__col .best__meat {
+          background: url("../images/icons/meat.svg") 50% 50% no-repeat; }
+        .best .best__content .best__row .best__col .best__hand {
+          background: url("../images/icons/hand.svg") 50% 50% no-repeat; }
+        .best .best__content .best__row .best__col .best__natural {
+          background: url("../images/icons/natural.svg") 50% 50% no-repeat; }
+        .best .best__content .best__row .best__col .best__title {
+          font-family: "Lifehack";
+          font-size: 24px;
+          margin-top: 22px;
+          line-height: 1.2; }
+        .best .best__content .best__row .best__col .best__text {
+          font-family: "Ubuntu";
+          font-size: 14px;
+          font-weight: 100;
+          margin-top: 15px;
+          padding-left: 50px;
+          text-align: left; }
+
+.reviews {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .reviews .reviews__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 100%; }
+    .reviews .reviews__list .reviews__item {
+      -webkit-flex-basis: 25%;
+      -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+      text-align: left; }
+      .reviews .reviews__list .reviews__item:hover .reviews__review {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 1; }
+      .reviews .reviews__list .reviews__item .reviews__photo {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat; }
+    .reviews .reviews__list .greyscale {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      -webkit-transition: .5s ease-in-out;
+      -o-transition: .5s ease-in-out;
+      transition: .5s ease-in-out; }
+    .reviews .reviews__list .reviews__review {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 1, 5, 0.7);
+      padding: 50px 30px 50px 20px;
+      opacity: 0;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s;
+      -webkit-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+      transform: scale(0.7);
+      overflow: hidden; }
+      .reviews .reviews__list .reviews__review .reviews__title {
+        font-family: "Gagalin";
+        font-size: 14px;
+        font-weight: 100;
+        color: #fff;
+        margin-bottom: 20px;
+        text-align: left; }
+      .reviews .reviews__list .reviews__review .reviews__text {
+        font-family: "Ubuntu";
+        font-weight: 100;
+        font-size: 14px;
+        line-height: 1.71;
+        color: #fff;
+        text-align: left;
+        padding-bottom: 20px; }
+      .reviews .reviews__list .reviews__review .reviews__more {
+        display: inline-block;
+        width: 110px;
+        height: 35px;
+        background: #2f3234;
+        border-radius: 5px;
+        color: #fff;
+        font-family: "Ubuntu";
+        font-weifgt: 200;
+        font-size: 13px;
+        line-height: 35px;
+        text-align: center;
+        text-transform: uppercase;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        cursor: pointer; }
+        .reviews .reviews__list .reviews__review .reviews__more:hover {
+          background: #474c4f; }
