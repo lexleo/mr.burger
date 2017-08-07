@@ -27,7 +27,7 @@
 
   .team-acco__title 
     font-size: 14px
-    color: #fff
+    color: $white
     margin-bottom: 10px
     display: flex
     align-items: center
@@ -37,7 +37,7 @@
       content: ""
       width: 0px
       height: 0px
-      border: 6px solid transparent
+      border: 5px solid transparent
       border-top-color: $yellow
       border-bottom: none
       margin-right: 10px
@@ -50,7 +50,6 @@
     .team-acco__content 
       height: auto
     
-
     .team-acco__title 
       color: $yellow
       
@@ -62,31 +61,30 @@
   overflow: hidden
   height: 0
 
+  .team-acco__position 
+    color: $white
+    font-size: 14px
+    @include ubuntu(bold)  
+    margin-bottom: 10px
 
-.team-acco__position 
-  color: $white
-  font-size: 14px
-  @include ubuntu(bold)  
-  margin-bottom: 10px
+  .team-acco__desc-text 
+    color: $white
+    @include ubuntu(light)
+    padding-left: 20px
+    font-size: 14px
+    text-align: left
 
-.team-acco__desc-text 
-  color: $white
-  @include ubuntu(light)
-  padding-left: 20px
-  font-size: 14px
-  text-align: left
+  .team-acco__avatar 
+    width: 100px
+    height: 100px
+    overflow: hidden
+    border-radius: 50%
+    position: relative
+    margin: 10px 15px 0px 15px
 
-.team-acco__avatar 
-  width: 100px
-  height: 100px
-  overflow: hidden
-  border-radius: 50%
-  position: relative
-
-.team-acco__avatar-pic 
-  position: absolute
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
-  // width: 100%
-  height: 100%
+  .team-acco__avatar-img 
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%

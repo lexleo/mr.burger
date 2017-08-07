@@ -1,0 +1,74 @@
+
+.menu 
+	background: url('../images/menu_bg.jpg') 50% no-repeat
+	background-size: cover
+	position: relative
+
+.menu__title 
+  position: absolute
+  top: 10%
+  left: 10%
+  color: $white
+  font-size: 72px
+  @include gagalin()
+
+
+.menu-acco 
+	position: absolute
+	right: 0
+	top: 0
+	bottom: 0
+  display: flex
+  flex-direction: row
+
+
+.menu-acco__item 
+	height: 100%
+
+	&.active 
+		.menu-acco__trigger-text 
+			color: $yellow
+
+
+.menu-acco__trigger 
+	width: rem(80px)
+	display: block
+	height: 100%
+	float: left
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-decoration: none
+  position: relative
+
+
+.menu-acco__trigger-text 
+	font-size: rem(40px)
+	color: $white
+	@include gagalin
+	text-align: center
+	white-space: nowrap
+  position: absolute
+  transform: rotate(-90deg) translateY(-50%)
+  transform-origin: 0 0
+  left: 50%
+  top: 100%
+  margin-top: -20px
+
+
+.menu-acco__content 
+	height: 100%
+	float: left
+	background: rgba(#2f3234, .93)
+	width: 0
+	overflow: hidden
+
+
+.menu-acco__text 
+	@include ubuntu(light)
+	font-size: 14px
+	color: #fff
+	padding: 60px 30px
+	width: 100%
+  line-height: 1.8
+  display: none
