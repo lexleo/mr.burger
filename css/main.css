@@ -465,15 +465,23 @@ li {
   right: 0;
   top: 0;
   bottom: 0;
-    bottom-display: flex;
-    bottom-flex-direction: row; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
 
 .menu-acco__item {
-  height: 100%; }
-  .menu-acco__item.active .menu-acco__trigger-text {
+  height: 100%;
+  border: 1px solid black; }
+  .menu-acco__item.active .menu-acco__section-text {
     color: #f9b43b; }
 
-.menu-acco__trigger {
+.menu-acco__section {
   width: 5rem;
   display: block;
   height: 100%;
@@ -482,27 +490,30 @@ li {
   background-position: center center;
   background-repeat: no-repeat;
   text-decoration: none;
-    text-decoration-position: relative; }
+  position: relative; }
 
-.menu-acco__trigger-text {
+.menu-acco__section-text {
   font-size: 2.5rem;
   color: #fff;
   font-family: 'Gagalin', Helvetica, sans-serif;
   text-align: center;
   white-space: nowrap;
-    white-space-position: absolute;
-    white-space-transform: rotate(-90deg) translateY(-50%);
-    white-space-transform-origin: 0 0;
-    white-space-left: 50%;
-    white-space-top: 100%;
-    white-space-margin-top: -20px; }
-
-.menu-acco__content {
-  height: 100%;
-  float: left;
-  background: rgba(47, 50, 52, 0.93);
-  width: 0;
-  overflow: hidden; }
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: rotate(-90deg) translateY(-50%);
+  -ms-transform: rotate(-90deg) translateY(-50%);
+  transform: rotate(-90deg) translateY(-50%);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  margin-top: -20px; }
+  .menu-acco__section-text .menu-acco__content {
+    height: 100%;
+    float: left;
+    background: rgba(47, 50, 52, 0.93);
+    width: 0;
+    overflow: hidden; }
 
 .menu-acco__text {
   font-family: 'Ubuntu', Helvetica, sans-serif;
@@ -511,5 +522,5 @@ li {
   color: #fff;
   padding: 60px 30px;
   width: 100%;
-    width-line-height: 1.8;
-    width-display: none; }
+  line-height: 1.8;
+  display: none; }

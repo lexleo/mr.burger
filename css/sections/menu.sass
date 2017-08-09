@@ -18,19 +18,20 @@
 	right: 0
 	top: 0
 	bottom: 0
-  display: flex
-  flex-direction: row
+	display: flex
+	flex-direction: row
 
 
 .menu-acco__item 
 	height: 100%
+	border: 1px solid black
 
 	&.active 
-		.menu-acco__trigger-text 
+		.menu-acco__section-text 
 			color: $yellow
 
 
-.menu-acco__trigger 
+.menu-acco__section
 	width: rem(80px)
 	display: block
 	height: 100%
@@ -39,29 +40,28 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	text-decoration: none
-  position: relative
+	position: relative
 
 
-.menu-acco__trigger-text 
+.menu-acco__section-text 
 	font-size: rem(40px)
 	color: $white
 	@include gagalin
 	text-align: center
 	white-space: nowrap
-  position: absolute
-  transform: rotate(-90deg) translateY(-50%)
-  transform-origin: 0 0
-  left: 50%
-  top: 100%
-  margin-top: -20px
-
-
-.menu-acco__content 
-	height: 100%
-	float: left
-	background: rgba(#2f3234, .93)
-	width: 0
-	overflow: hidden
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: rotate(-90deg) translateY(-50%)
+	transform-origin: 0 0
+	margin-top: -20px
+	
+	.menu-acco__content 
+		height: 100%
+		float: left
+		background: rgba(#2f3234, .93)
+		width: 0
+		overflow: hidden
 
 
 .menu-acco__text 
@@ -70,5 +70,5 @@
 	color: #fff
 	padding: 60px 30px
 	width: 100%
-  line-height: 1.8
-  display: none
+	line-height: 1.8
+	display: none
