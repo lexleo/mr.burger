@@ -69,6 +69,10 @@ li {
   min-height: 650px;
   height: 100vh; }
 
+.greyscale {
+  -webkit-filter: greyscale(100%);
+  filter: greyscale(100%); }
+
 .pagination__list {
   text-align: center;
   color: #fff;
@@ -477,7 +481,7 @@ li {
 
 .menu-acco__item {
   height: 100%;
-  border: 1px solid black; }
+  background-color: #000; }
   .menu-acco__item.active .menu-acco__section-text {
     color: #f9b43b; }
 
@@ -491,6 +495,16 @@ li {
   background-repeat: no-repeat;
   text-decoration: none;
   position: relative; }
+  .menu-acco__section:hover .menu-acco__tint {
+    background-color: rgba(0, 0, 0, 0.2); }
+
+.menu-acco__tint {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s; }
 
 .menu-acco__section-text {
   font-size: 2.5rem;
@@ -501,13 +515,14 @@ li {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: rotate(-90deg) translateY(-50%);
-  -ms-transform: rotate(-90deg) translateY(-50%);
-  transform: rotate(-90deg) translateY(-50%);
+  -webkit-transform: rotate(-90deg) translateY(-50%) translateX(-50%);
+  -ms-transform: rotate(-90deg) translateY(-50%) translateX(-50%);
+  transform: rotate(-90deg) translateY(-50%) translateX(-50%);
   -webkit-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
   transform-origin: 0 0;
-  margin-top: -20px; }
+  margin-top: -20px;
+  opacity: 1; }
   .menu-acco__section-text .menu-acco__content {
     height: 100%;
     float: left;
