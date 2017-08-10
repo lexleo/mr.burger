@@ -539,3 +539,81 @@ li {
   width: 100%;
   line-height: 1.8;
   display: none; }
+
+.contacts {
+  background: url("../images/contacts_bg.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative; }
+  .contacts .footer {
+    background: url("../images/footer_bg.jpg") center bottom no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0; }
+    .contacts .footer .footer__container {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+  .contacts .footer__col {
+    width: 50%;
+    margin-bottom: 10px;
+    margin-top: 10px; }
+  .contacts .footer__address {
+    color: #fff;
+    font-size: 14px; }
+  .contacts .footer__phone {
+    color: #e45028;
+    font-family: 'Ubuntu', Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px; }
+  .contacts .footer__col_right {
+    text-align: right;
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+  .contacts .socials {
+    position: relative;
+    top: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 50px; }
+  .contacts .socials__item {
+    margin-left: 10px; }
+  .contacts .socials__link {
+    display: inline-block;
+    max-width: 23px;
+    max-height: 20px;
+    opacity: .3;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+    .contacts .socials__link:hover {
+      opacity: 1; }
+  .contacts .socials__link-icon {
+    width: 20px;
+    height: 20px; }
