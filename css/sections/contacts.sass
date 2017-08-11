@@ -10,7 +10,7 @@
     bottom: 0
     left: 0
     right: 0
-    padding: 10px 0
+    padding: 5px 0
 
     .footer__container 
       display: flex
@@ -21,16 +21,31 @@
     width: 50%
     margin-bottom: 10px
     margin-top: 10px
+    text-align: left
+    margin-left: 80px
+    display: column
+
     
   .footer__address 
     color: $white
+    @include ubuntu(light)
     font-size: 14px
+    margin-bottom: 4px
+
 
   .footer__phone 
     color: $red
     @include ubuntu(bold)
     text-decoration: none
     font-size: 14px
+    display: inline-block
+
+  .footer__phone-icon
+    display: inline-block
+    width: 12px
+    height: 12px
+    margin-right: 5px
+
 
   .footer__col_right 
     text-align: right
@@ -44,11 +59,11 @@
     top: 50%
     display: flex
     align-items: center
-    margin-right: 50px
+    margin-right: 80px
 
 
   .socials__item 
-    margin-left: 10px
+    margin-right: 18px
 
 
   .socials__link 
@@ -60,8 +75,6 @@
     &:hover 
       opacity: 1
     
-
-
   .socials__link-icon 
     width: 20px
     height: 20px
