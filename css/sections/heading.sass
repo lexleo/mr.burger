@@ -4,117 +4,127 @@
   background: url("../images/heading_bg.jpg") center center no-repeat
   background-size: cover
 
-  .heading__wrapper
-    width: 960px
+.header
+  display: flex
+  align-items: center
+  width: rem(960px)
+  margin: 0
+  padding: 0
+  // text-align: left
+  font-size: rem(13px)      
+  @include ubuntu('medium')      
+
+  .header__logo
     display: inline-block
+    vertical-align: middle
+    height: rem(69px)
+    width: rem(92px)
 
-    .header
-      display: inline-block
-      width: 960px
-      margin: 0
-      padding: 0
-      text-align: left
-      font-size: 13px      
-      @include ubuntu('medium')      
+  .header__content
+    display: flex
+    align-items: center
+    overflow: hidden
+    margin-left: rem(235px)
 
-      .header__logo
-        display: inline-block
-        vertical-align: middle
-        height: 69px
-        width: 92px
-        width: 19%
+    .nav__list
+      display: flex
+      align-items: center
 
-      .header__content
-        text-align: right
-        height: 81px
-        width: 80%
-        display: inline-block
-        vertical-align: middle
-        overflow: hidden
-        line-height: 78px
-
-        .nav__list
+      .nav__item
+        display: flex
+        align-items: center
+        &:after
+          content: ""
           display: inline-block
-          vertical-align: middle
+          width: 0.25rem
+          height: 0.25rem
+          border-radius: 50%
+          background: $white
+          margin: 0rem 1rem
+        &:last-child:after
+          display: none
 
-          .nav__item
-            display: inline-block
-            vertical-align: middle
-            white-space: nowrap
-            &:after
-              display: inline-block
-              vertical-align: middle
-              content: ' '
-              @include circle(5px, $white)
-              margin: 0 13px
-            &:last-child:after
-              display: none
-              
-            .nav__link
-              text-transform: uppercase
-              text-decoration: none
-              color: $white
-              transition: .5s
-              &:hover
-                color: $yellow
-
-        .header__order
-          display: inline-block
-          width: 97px
-          height: 35px
-          vertical-align: middle
-          color: $white
-          margin-left: 15px
+        .nav__link
           text-transform: uppercase
-          line-height: 35px
-          text-align: center
-          background: $red
-          border-radius: 5px
-          font-size: 13px
-          cursor: pointer
+          text-decoration: none
+          color: $white
           transition: .5s
           &:hover
-            background: darken($red, 10%)
+            color: $yellow
+            text-decoration: underline
 
-    .content
-      text-align: left
-
-      .content__picture
-        background: url("../images/steam_burger.png") 20px 50px no-repeat
-        display: inline-block
-        width: 50%
-        height: 450px
-        vertical-align: middle
-
-      .content__titles
-        width: 45%
-        display: inline-block
-        vertical-align: middle
-        text-align: left
-        padding-left: 7px
-
-      .content__title
-        color: $yellow
-        text-transform: uppercase
-        font-size: 74px
-        padding-top: 17px
-        letter-spacing: -1.5px
-        overflow: hidden
-        line-height: 1.2        
-        @include gagalin()
-
-      
-      .content__subtitle
-        color: $white
-        font-size: 64px
-        margin: 0
-        letter-spacing: -1px
-        line-height: 0.9
-        padding-top: 25px
-        @include lifehack()
-    
-    .next-screen-arrow
-      position: absolute
-      left: 50vw
-      bottom: 1.5vw
+    .header__order
+      display: flex
+      align-items: center
+      justify-content: center
+      width: rem(97px)
+      height: rem(35px)
+      color: $white
+      margin-left: rem(15px)
+      text-transform: uppercase
+      text-align: center
+      background: $red
+      border-radius: rem(5px)
+      font-size: rem(13px)
       cursor: pointer
+      transition: .5s
+      &:hover
+        background: darken($red, 10%)
+
+.content
+  display: flex
+  flex-direction: row
+  flex: 1
+  justify-content: center
+  align-items: center
+  text-align: left
+  padding-bottom: 15%
+  @include tablets
+    flex-direction: column
+    text-align: center
+  @include phones
+    flex-direction:column
+    align-items:center
+    padding: 0
+  
+  .content__left, .content__right
+    width: 50%
+    @include tablets
+      float: none
+      width: auto
+    @include phones
+      float: none
+      width: auto
+
+  .content__img
+    max-width: 100%
+
+  .content__right
+    padding-bottom: rem(30px)
+
+
+  .content__title
+    color: $yellow
+    text-transform: uppercase
+    font-size: rem(74px)
+    padding-top: rem(17px)
+    letter-spacing: rem(-1.5px)
+    line-height: 1.2        
+    @include gagalin()
+
+  
+  .content__subtitle
+    color: $white
+    font-size: rem(64px)
+    margin: 0
+    letter-spacing: rem(-1px)
+    line-height: 0.9
+    padding-top: rem(25px)
+    @include lifehack()
+
+.next-screen-arrow
+  position: absolute
+  left: 50%
+  bottom: 1.5vw
+  cursor: pointer
+	

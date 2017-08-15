@@ -6,11 +6,19 @@ $black: #000
 $grey: #474c4f
 
 
+//resolutions
+$desktop: 1200px
+$laptop: 992px
+$tablets: 768px
+$phones: 480px
+
+
 // Config
 @import "config/mixins.sass"
 
 // Layout
 @import "layout/normalize.min.css"
+@import "layout/media"
 @import "layout/fonts"
 @import "layout/base"
 
@@ -19,12 +27,12 @@ $grey: #474c4f
 
 
 // Pages content
-@import "sections/heading.sass"
-@import "sections/best.sass"
-@import "sections/reviews.sass"
-@import "sections/team.sass"
-@import "sections/menu.sass"
-@import "sections/contacts.sass"
+@import "sections/heading"
+@import "sections/best"
+@import "sections/reviews"
+@import "sections/team"
+@import "sections/menu"
+@import "sections/contacts"
 
 
 
