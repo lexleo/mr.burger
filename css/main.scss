@@ -1,0 +1,57 @@
+// Colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+$white: #fff;
+
+
+// Resolutions
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
+
+// Normalize
+@import "layout/normalize.min.css";
+
+
+// Media queries
+@import "layout/media";
+
+
+// Settings
+@import "layout/fonts";
+@import "layout/mixins";
+@import "layout/layout";
+@import "layout/section";
+
+
+//Commons
+@import "layout/common";
+
+
+//Components
+@import "components/header";
+@import "components/pagination";
+@import "components/hamburger-menu";
+@import "components/button";
+@import "components/team-accordeon";
+@import "components/menu-accordeon";
+@import "components/footer";
+@import "components/socials";
+
+
+
+//Sections
+@import "sections/heading.scss";
+@import "sections/best.scss";
+@import "sections/menu.scss";
+@import "sections/team.scss";
+@import "sections/reviews.scss";
+@import "sections/contacts.scss";
+
+
+
+

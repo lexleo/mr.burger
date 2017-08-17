@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <!--[if lt IE 8]>
   <p>Вы используете старый браузер. <a href="http://browsehappy.com/">
@@ -12,211 +12,214 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mr. Burger</title>
   <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/layout/normalize.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <main class="wrapper">
+  <div class="wrapper">
 
-    <!-- Heading -->
+    <!--Heading-->
     <section class="section heading">
+
       <div class="container">
 
-        <header class="header">
+        <!--Header-->
+        <div class="header">
+
           <div class="header__logo">
             <a href="index.html">
               <img src="images/icons/logo.svg" alt="">
             </a>
           </div>
-          <div class="header__content">
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="">о нас</a></li>
-                <li class="nav__item"><a class="nav__link" href="">бургеры</a></li>
-                <li class="nav__item"><a class="nav__link" href="">команда</a></li>
-                <li class="nav__item"><a class="nav__link" href="">меню</a></li>
-                <li class="nav__item"><a class="nav__link" href="">отзывы</a></li>
-                <li class="nav__item"><a class="nav__link" href="">контакты</a></li>
-              </ul>
-            </nav>
-            <div class="header__order">
-              заказать
-            </div>
-          </div>
-        </header>
 
-        <div class="content">
-          <div class="content__left">
-            <img class="content__img" src="images/steam_burger.png" alt="">
+          <div class="header__btns">
+
+            <div class="header__menu">
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a class="nav__link" href="">о нас</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="">бургеры</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="">команда</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="">меню</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="">отзывы</a>
+                  </li>
+                  <li class="nav__item">
+                    <a class="nav__link" href="">контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div class="header__links">
+              <a class="order-link btn" href="">Заказать</a>
+              <a class="hamburger-menu-link" href="">
+                <div class="hamburger-menu-link__bars"></div>
+              </a>
+            </div>
+
           </div>
-          <div class="content__right">
-            <div class="content__title">мы делаем</div>
-            <div class="content__subtitle">натуральные бургеры</div>
+
+        </div>
+
+        <!--Content-->
+        <div class="heading__container">
+          <div class="heading__content">
+            <div class="heading__left">
+              <img class="heading__img" src="images/steam_burger.png" alt="">
+            </div>
+            <div class="heading__right">
+              <div class="section__title">Мы делаем</div>
+              <div class="heading__subtitle">Натуральные бургеры</div>
+            </div>
           </div>
         </div>
 
-        <!-- Next Screen Arrow  -->
-        <img class="next-screen-arrow" src="images/icons/arrow-scroll.svg" alt="">
-
+        <!--Next screen arrow-->
+        <a class="next-screen-arrow" href="#">
+          <svg class="next-screen-arrow__icon">
+            <use xlink:href="images/icons/sprite.svg#arrow-scroll"></use>
+          </svg>
+        </a>
 
       </div>
+
     </section>
 
-
-    <!-- Best -->
+    <!--Best-->
     <section class="section best">
-      <div class="best__wrapper">
-        <div class="best__main-title">мы лучшие</div>
-        <div class="best__content">
-          <div class="best__row">
-            <div class="best__col">
-              <div class="best__img best__meat"></div>
+
+      <div class="container">
+        <div class="section__title section__title_black">Мы лучшие</div>
+        <ul class="best__list">
+          <li class="best__item">
+            <div class="best__icon">
+              <svg class="best__icon-pic" style="fill: #e25028">
+                <use xlink:href="./images/icons/sprite.svg#meat"></use>
+              </svg>
+            </div>
+            <div class="best__desc">
               <div class="best__title">100% свежее мясо</div>
-
+              <div class="best__text text-block">
+                <p>Для изготовления котлет мы используем стопроцентное мясо от наших проверенных поставщиков.</p>
+              </div>
             </div>
-            <div class="best__col">
-              <div class="best__img best__hand"></div>
+          </li>
+          <li class="best__item">
+            <div class="best__icon">
+              <svg class="best__icon-pic" style="fill: #f8b43a">
+                <use xlink:href="./images/icons/sprite.svg#hand"></use>
+              </svg>
+            </div>
+            <div class="best__desc">
               <div class="best__title">Ручная сборка</div>
-
-            </div>
-            <div class="best__col">
-              <div class="best__img best__natural"></div>
-              <div class="best__title">
-                Натуральные<br>ингридиенты
+              <div class="best__text text-block">
+                <p>Бережно собранные нашими поварами, наши бургеры хранят человеческое тепло и гарантируют неизменное качество.</p>
               </div>
             </div>
-          </div>
-          <div class="best__row">
-            <div class="best__col">
-              <div class="best__text">
-                Для изготовления котлет мы используем стопроцентное мясо от наших проверенных поставщиков
+          </li>
+          <li class="best__item">
+            <div class="best__icon">
+              <svg class="best__icon-pic" style="fill: #8ac03e">
+                <use xlink:href="./images/icons/sprite.svg#natural"></use>
+              </svg>
+            </div>
+            <div class="best__desc">
+              <div class="best__title">Натуральные ингредиенты</div>
+              <div class="best__text text-block">
+                <p>Мы используем только самые свежие и обязательно натуральные фермерские продукты.</p>
               </div>
             </div>
-            <div class="best__col">
-              <div class="best__text">
-                Бережно собранные нашими поварами, наши бургеры хранят человеческое тепло и гарантируют неизменное качество
-              </div>
-            </div>
-            <div class="best__col">
-              <div class="best__text">
-                Мы используем только самые свежие и обязательно натуральные фермерские продукты
-              </div>
-            </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
+
     </section>
 
-    <!-- Team -->
+    <!--Team-->
     <section class="section team">
-      <div class="team__right-block">
+      <div class="team__section">
         <div class="team__content">
-          <div class="team__title">
-            Команда
-          </div>
+          <div class="section__title">Команда</div>
           <ul class="team-acco">
             <li class="team-acco__item">
-              <div class="team-acco__title">
-                Дэниел Редклифф
-              </div>
+              <a class="team-acco__trigger" href="#">Дэниэл Редклифф</a>
               <div class="team-acco__content">
-                <div class="team-acco__image">
-                  <div class="team-acco__avatar">
-                    <img src="images/photos/teammate1.jpg" alt="" class="team-acco__avatar-img">
-                  </div>
+                <div class="team-acco__pic">
+                  <div class="team-acco__img" style="background-image: url('images/photos/teammate1.jpg')"></div>
                 </div>
-                <div class="team-acco__desc">
-                  <div class="team-acco__position">
-                    Повар
-                  </div>
-                  <div class="team-acco__desc-text">
-                    <p>
-                      Всегда готов придумать для вас что-то новое, аппетитное и неизменно крутое.
-                    </p>
+                <div class="team-acco__text">
+                  <div class="team-acco__title">Шеф-повар</div>
+                  <div class="team-acco__text-content">
+                    Всегда готов придумать для вас что-то новое, аппетитное и неизменно крутое.
                   </div>
                 </div>
               </div>
             </li>
             <li class="team-acco__item">
-              <div class="team-acco__title">
-                Ричард Джеймс
-              </div>
+              <a class="team-acco__trigger" href="#">Ричард Джеймс</a>
               <div class="team-acco__content">
-                <div class="team-acco__image">
-                  <div class="team-acco__avatar">
-                    <img src="images/photos/teammate2.jpg" alt="" class="team-acco__avatar-img">
-                  </div>
+                <div class="team-acco__pic">
+                  <div class="team-acco__img" style="background-image: url('images/photos/teammate2.jpg')"></div>
                 </div>
-                <div class="team-acco__desc">
-                  <div class="team-acco__position">
-                    Оператор
-                  </div>
-                  <div class="team-acco__desc-text">
-                    <p>
-                      С радостью поможет подобрать идеальный бургер и оформить заказ.
-                    </p>
+                <div class="team-acco__text">
+                  <div class="team-acco__title">Оператор</div>
+                  <div class="team-acco__text-content">
+                    С радостью поможет подобрать идеальный бургер и оформить заказ.
                   </div>
                 </div>
               </div>
             </li>
             <li class="team-acco__item active">
-              <div class="team-acco__title">
-                Джейк Финн
-              </div>
+              <a class="team-acco__trigger" href="#">Джейк Финн</a>
               <div class="team-acco__content">
-                <div class="team-acco__image">
-                  <div class="team-acco__avatar">
-                    <img src="images/photos/teammate3.jpg" alt="" class="team-acco__avatar-img">
-                  </div>
+                <div class="team-acco__pic">
+                  <div class="team-acco__img" style="background-image: url('images/photos/teammate3.jpg')"></div>
                 </div>
-                <div class="team-acco__desc">
-                  <div class="team-acco__position">
-                    Администратор
-                  </div>
-                  <div class="team-acco__desc-text">
-                    <p>
-                      Отвечает лично перед вами за качество сервиса и продукции.
-                    </p>
+                <div class="team-acco__text">
+                  <div class="team-acco__title">Менеджер</div>
+                  <div class="team-acco__text-content">
+                    Отвечает лично перед вами за качество сервиса и продукции.
                   </div>
                 </div>
               </div>
             </li>
             <li class="team-acco__item">
-              <div class="team-acco__title">
-                Николай Иванов
-              </div>
+              <a class="team-acco__trigger" href="#">Николай Иванов</a>
               <div class="team-acco__content">
-                <div class="team-acco__image">
-                  <div class="team-acco__avatar">
-                    <img src="images/photos/teammate4.jpg" alt="" class="team-acco__avatar-img">
-                  </div>
+                <div class="team-acco__pic">
+                  <div class="team-acco__img" style="background-image: url('images/photos/teammate4.jpg')"></div>
                 </div>
-                <div class="team-acco__desc">
-                  <div class="team-acco__position">
-                    Повар
-                  </div>
-                  <div class="team-acco__desc-text">
-                    <p>
-                      Сделает для вас любой бургер буквально за несколько минут.
-                    </p>
+                <div class="team-acco__text">
+                  <div class="team-acco__title">Повар</div>
+                  <div class="team-acco__text-content">
+                    Сделает для вас любой бургер буквально за несколько минут.
                   </div>
                 </div>
               </div>
             </li>
           </ul>
         </div>
+
       </div>
     </section>
 
-    <!-- Menu -->
+    <!--Menu-->
     <section class="section menu">
-      <div class="menu__title">Меню</div>
+      <div class="section__title section__title_white menu__title">Меню</div>
       <ul class="menu-acco">
         <li class="menu-acco__item">
-          <a class="menu-acco__section" href="#" style="background-image: url('../images/meat_bg.jpg')">
+          <a class="menu-acco__trigger" href="#" style="background-image: url('images/meat_bg.jpg')">
             <div class="menu-acco__tint"></div>
-            <div class="menu-acco__section-text">Для мясоедов</div>
+            <div class="menu-acco__trigger-text">Для мясоедов</div>
           </a>
           <div class="menu-acco__content">
             <div class="menu-acco__text">
@@ -230,9 +233,9 @@
           </div>
         </li>
         <li class="menu-acco__item">
-          <a class="menu-acco__section" href="#" style="background-image: url('../images/vegan_bg.jpg')">
+          <a class="menu-acco__trigger" href="#" style="background-image: url('images/vegan_bg.jpg')">
             <div class="menu-acco__tint"></div>
-            <div class="menu-acco__section-text">Вегетарианское</div>
+            <div class="menu-acco__trigger-text">Вегетарианское</div>
           </a>
           <div class="menu-acco__content">
             <div class="menu-acco__text">
@@ -246,9 +249,9 @@
           </div>
         </li>
         <li class="menu-acco__item">
-          <a class="menu-acco__section" href="#" style="background-image: url('../images/diet_bg.jpg')">
+          <a class="menu-acco__trigger" href="#" style="background-image: url('images/diet_bg.jpg')">
             <div class="menu-acco__tint"></div>
-            <div class="menu-acco__section-text">Диетическое</div>
+            <div class="menu-acco__trigger-text">Диетическое</div>
           </a>
           <div class="menu-acco__content">
             <div class="menu-acco__text">
@@ -264,111 +267,126 @@
       </ul>
     </section>
 
-    <!-- Reviews  -->
+    <!--Reviews-->
     <section class="section reviews">
       <ul class="reviews__list">
-
-        <div class="reviews__item">
-          <div class="reviews__photo greyscale" style="background-image: url('images/photos/user1.jpg');">
-            <div class="reviews__review">
-              <div class="reviews__title">юля поспелова</div>
-              <div class="reviews__text">Если нужно «задобрить» мужа, заказываю домой доставку бургеров. Ну, и пивка, конечно. Действует безотказно!
+        <li class="reviews__item">
+          <div class="review">
+            <div class="review__photo" style="background-image: url('images/photos/user1.jpg')"></div>
+            <div class="review__hover">
+              <div class="review__title">юля поспелова</div>
+              <div class="review__shorttext">Если нужно «задобрить» мужа, заказываю домой доставку бургеров. Ну, и пивка, конечно. Действует безотказно!</div>
+              <div class="review__button-wrap">
+                <a class="review__view" href="#full-review">Подробнее</a>
               </div>
-              <div class="reviews__more">подробнее</div>
             </div>
           </div>
-        </div>
-
-        <div class="reviews__item">
-          <div class="reviews__photo greyscale" style="background-image: url('images/photos/user2.jpg');">
-            <div class="reviews__review">
-              <div class="reviews__title">константин спилберг</div>
-              <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
+        </li>
+        <li class="reviews__item">
+          <div class="review">
+            <div class="review__photo" style="background-image: url('images/photos/user2.jpg')"></div>
+            <div class="review__hover">
+              <div class="review__title">Константин Спилберг</div>
+              <div class="review__shorttext">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки
                 могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-              <div class="reviews__more">подробнее</div>
+              <div class="review__button-wrap">
+                <a class="review__view" href="#full-review">Подробнее</a>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="reviews__item">
-          <div class="reviews__photo greyscale" style="background-image: url('images/photos/user3.jpg');">
-            <div class="reviews__review">
-              <div class="reviews__title">лена грин</div>
-              <div class="reviews__text">Знакомые постоянно спрашивают, как мне удается оставаться стройной и привлекательной в мои 46?! Мои друзья
+        </li>
+        <li class="reviews__item">
+          <div class="review">
+            <div class="review__photo" style="background-image: url('images/photos/user3.jpg')"></div>
+            <div class="review__hover">
+              <div class="review__title">Лена Грин</div>
+              <div class="review__shorttext">Знакомые постоянно спрашивают, как мне удается оставаться стройной и привлекательной в мои 46?! Мои друзья
                 уже знают, что секрет весьма прост — бургерная диета!</div>
-              <div class="reviews__more">подробнее</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="reviews__item">
-          <div class="reviews__photo greyscale" style="background-image: url('images/photos/user4.jpg');">
-            <div class="reviews__review">
-              <div class="reviews__title">гриша бэдбит</div>
-              <div class="reviews__text">Спрашивал у пацанов, как раскачаться. Все сошлись на том, что правильное питание даже важнее, чем нагрузки.
-                Так что тренировки начал в Mr.Burger, ведь бургеры содержат в себе все необходимые нутриенты.
+              <div class="review__button-wrap">
+                <a class="review__view" href="#full-review">Подробнее</a>
               </div>
-              <div class="reviews__more">подробнее</div>
             </div>
           </div>
-        </div>
-
-        <div class="reviews__item">
-          <div class="reviews__photo greyscale" style="background-image: url('images/photos/user5.jpg');">
-            <div class="reviews__review">
-              <div class="reviews__title">егор козырев</div>
-              <div class="reviews__text">Сперва был тренд на пиццу. Потом был тренд на роллы. Теперь настало время бургеров. Будь в тренде, чо.
+        </li>
+        <li class="reviews__item">
+          <div class="review">
+            <div class="review__photo" style="background-image: url('images/photos/user4.jpg')"></div>
+            <div class="review__hover">
+              <div class="review__title">гриша бэдбит</div>
+              <div class="review__shorttext">Спрашивал у пацанов, как раскачаться. Все сошлись на том, что правильное питание даже важнее, чем нагрузки.
+                Так что тренировки начал в Mr.Burger, ведь бургеры содержат в себе все необходимые нутриенты.</div>
+              <div class="review__button-wrap">
+                <a class="review__view" href="#full-review">Подробнее</a>
               </div>
-              <div class="reviews__more">подробнее</div>
             </div>
           </div>
-        </div>
-
-        <div class="reviews__item">
-          <div class="reviews__photo greyscale" style="background-image: url('images/photos/user6.jpg');">
-            <div class="reviews__review">
-              <div class="reviews__title">ева спаржа</div>
-              <div class="reviews__text">Вообще-то я веган. Но один раз в неделю традиционно устраиваю себе поблажку и с удовольствием кушаю в Mr.Burger.
+        </li>
+        <li class="reviews__item">
+          <div class="review">
+            <div class="review__photo" style="background-image: url('images/photos/user5.jpg')"></div>
+            <div class="review__hover">
+              <div class="review__title">егор козырев</div>
+              <div class="review__shorttext">Сперва был тренд на пиццу. Потом был тренд на роллы. Теперь настало время бургеров. Будь в тренде, чо.</div>
+              <div class="review__button-wrap">
+                <a class="review__view" href="#full-review">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="reviews__item">
+          <div class="review">
+            <div class="review__photo" style="background-image: url('images/photos/user6.jpg')"></div>
+            <div class="review__hover">
+              <div class="review__title">ева спаржа</div>
+              <div class="review__shorttext">Вообще-то я веган. Но один раз в неделю традиционно устраиваю себе поблажку и с удовольствием кушаю в Mr.Burger.
                 Их говяжьи котлеты — это нечто! Go Vegan!</div>
-              <div class="reviews__more">подробнее</div>
+              <div class="review__button-wrap">
+                <a class="review__view" href="#full-review">Подробнее</a>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="reviews__item">
-          <div class="reviews__photo greyscale" style="background-image: url('images/photos/user7.jpg');">
-            <div class="reviews__review">
-              <div class="reviews__title">иван федорович</div>
-              <div class="reviews__text">Эти ребята творят из мяса что-то невероятное! Никогда не ел такого! Иногда ловлю себя на мысли, что я бы отдал
+        </li>
+        <li class="reviews__item">
+          <div class="review">
+            <div class="review__photo" style="background-image: url('images/photos/user7.jpg')"></div>
+            <div class="review__hover">
+              <div class="review__title">иван федорович</div>
+              <div class="review__shorttext">Эти ребята творят из мяса что-то невероятное! Никогда не ел такого! Иногда ловлю себя на мысли, что я бы отдал
                 им своего сумасшедшего пса!</div>
-              <div class="reviews__more">подробнее</div>
+              <div class="review__button-wrap">
+                <a class="review__view" href="#full-review">Подробнее</a>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="reviews__item">
-          <div class="reviews__photo greyscale" style="background-image: url('images/photos/user8.jpg');">
-            <div class="reviews__review">
-              <div class="reviews__title">джейк джилленхол</div>
-              <div class="reviews__text">В последнее время стал чаще летать на премьеры своих фильмов в Россию. Специально, чтобы покушать в Mr.Burger!
+        </li>
+        <li class="reviews__item">
+          <div class="review">
+            <div class="review__photo" style="background-image: url('images/photos/user8.jpg')"></div>
+            <div class="review__hover">
+              <div class="review__title">Джейк Джилленхол</div>
+              <div class="review__shorttext">В последнее время стал чаще летать на премьеры своих фильмов в Россию. Специально, чтобы покушать в Mr.Burger!
                 Уверяю вас, у нас таких бургеров нет!</div>
-              <div class="reviews__more">подробнее</div>
+              <div class="review__button-wrap">
+                <a class="review__view" href="#full-review">Подробнее</a>
+              </div>
             </div>
           </div>
-        </div>
+        </li>
+      </ul>
     </section>
 
-    <section class="section contacts">
+    <!--Contacts-->
+    <section class="section map">
       <footer class="footer">
-        <div class="footer__container">
+        <div class="container footer__container">
           <div class="footer__col">
             <div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-            <a class="footer__phone" href="tel:+78123771377">
-              <svg class="footer__phone-icon" style="fill: #e45028">
-                <use xlink:href="images/icons/sprite.svg#phone"></use>
+            <div class="footer__phone">
+              <svg class="footer__phone-icon" style="fill:#e45028;">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="images/icons/sprite.svg#phone"></use>
               </svg>
-              +7 (812) 377-13-77
-            </a>
+              <a class="footer__phone-link" href="tel:+78123771377">+7 (812) 377-13-77</a>
+            </div>
           </div>
           <div class="footer__col footer__col_right">
             <ul class="socials">
@@ -406,37 +424,27 @@
       </footer>
     </section>
 
+    <!--Pagination-->
+    <ul class="fixed-menu">
+      <li class="fixed-menu__item">
+        <a class="fixed-menu__link" href="" data-scroll-to="0"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a class="fixed-menu__link" href="" data-scroll-to="1"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a class="fixed-menu__link" href="" data-scroll-to="2"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a class="fixed-menu__link" href="" data-scroll-to="3"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a class="fixed-menu__link" href="" data-scroll-to="4"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a class="fixed-menu__link" href="" data-scroll-to="5"></a>
+      </li>
+    </ul>
 
-  </main>
-
-  <!-- Pagination  -->
-  <ul class="pagination__list">
-    <li class="pagination__item pagination__item-active">
-      <a href="" class="pagination__link">●</a>
-    </li>
-    <li class="pagination__item">
-      <a href="" class="pagination__link">●</a>
-    </li>
-    <li class="pagination__item">
-      <a href="" class="pagination__link">●</a>
-    </li>
-    <li class="pagination__item">
-      <a href="" class="pagination__link">●</a>
-    </li>
-    <li class="pagination__item">
-      <a href="" class="pagination__link">●</a>
-    </li>
-    <li class="pagination__item">
-      <a href="" class="pagination__link">●</a>
-    </li>
-    <li class="pagination__item">
-      <a href="" class="pagination__link">●</a>
-    </li>
-    <li class="pagination__item">
-      <a href="" class="pagination__link">●</a>
-    </li>
-  </ul>
-
+  </div>
 </body>
-
-</html>
