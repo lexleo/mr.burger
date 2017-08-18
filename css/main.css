@@ -200,7 +200,7 @@ footer {
     height: 0.25rem;
     border-radius: 50%;
     background: white;
-    margin: 0 0.75rem; }
+    margin: 0 0.9375rem; }
   .nav__item:last-child {
     margin-right: 0; }
     .nav__item:last-child:after {
@@ -209,7 +209,7 @@ footer {
 .nav__link {
   font-size: 0.8125rem;
   text-transform: uppercase;
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-family: 'Ubuntu', Helvetica, sans-serif;
   font-weight: 500; }
@@ -710,7 +710,7 @@ footer {
       width: auto; } }
 
 .heading__right {
-  padding-top: 7.1875rem; }
+  padding-top: 4.0625rem; }
   @media screen and (max-width: 768px) {
     .heading__right {
       padding-top: 0; } }
@@ -720,7 +720,7 @@ footer {
   color: white;
   font-family: 'Lifehack-Medium';
   text-transform: lowercase;
-  line-height: 1em; }
+  line-height: 0.95em; }
 
 .heading__img {
   display: inline-block;

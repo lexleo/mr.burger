@@ -45,7 +45,7 @@
 		height: rem(4px);
 		border-radius: 50%;
 		background: white;
-		margin: 0 rem(12px);
+		margin: 0 rem(15px);
 	}
 
 	&:last-child {
@@ -60,7 +60,7 @@
 .nav__link {
 	font-size: rem(13px);
 	text-transform: uppercase;
-	color: white;
+	color: $white;
 	text-decoration: none;
 	@include ubuntu(medium);
 

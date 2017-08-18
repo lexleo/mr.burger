@@ -39,7 +39,7 @@
 .heading__left {}
 
 .heading__right {
-  padding-top: rem(115px);
+  padding-top: rem(65px);
   @include tablets() {
     padding-top: 0;
   }
@@ -50,7 +50,7 @@
   color: white;
   @include lifehack;
   text-transform: lowercase;
-  line-height: 1em;
+  line-height: 0.95em;
 }
 
 .heading__img {
