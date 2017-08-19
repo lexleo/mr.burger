@@ -28,6 +28,7 @@
 .footer__col {
   width: 50%;
   margin-bottom: rem(5px);
+  margin-top: rem(5px);
   @include phones {
     width: 100%;
     text-align: center;

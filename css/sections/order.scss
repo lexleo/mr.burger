@@ -1,0 +1,246 @@
+.order{
+  background:url("../images/order_bg.jpg") center center no-repeat;
+  background-size:cover;
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  .section__title{
+      text-align:center;
+      margin-bottom:rem(90px);
+      margin-top:rem(90px);
+
+      @include tablets{
+      margin-bottom:rem(50px);
+  }
+  }
+}
+
+.order__form{
+  margin-left:-5%;
+  display:flex;
+
+  @include tablets{
+      flex-direction:column;
+      align-items: center;
+      justify-content:center;
+  }
+}
+
+.order__form-col{
+  width:45%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  @include tablets{
+      width:70%;
+  }
+  @include phones{
+      width:90%;
+  }
+}
+
+.order__form-row{
+  margin-bottom:rem(16px);
+  display:flex;
+  flex-direction:row;
+}
+
+.order__form-text{
+  margin-bottom: rem(7px);
+  @include ubuntu($style:light);
+  color:#fff;
+  font-size:rem(14px);
+}
+
+.order__form-input{
+  font-size:rem(14px);
+  padding:rem(5px) rem(10px);
+  border:rem(1px) solid #d1cfcb;
+  border-radius: rem(5px);
+  width:100%;
+}
+
+.order__form-block{
+  width:100%;
+  margin-right:rem(10px);
+}
+
+.order__form-row{
+  display:flex;
+  margin-left:rem(-10px);
+
+  @include phones{
+      justify-content: center;
+  }
+}
+
+.order__form-input_textarea{
+  height:rem(110px);
+  resize:none;
+}
+
+.order__radio{
+  white-space:nowrap;
+  margin-right:rem(20px);
+  cursor:pointer;
+  display: flex;
+  @include phones{
+      margin-bottom:rem(20px);
+  }
+}
+
+.order__radio-elem{
+  visibility:hidden;
+}
+
+.order__radio-fake{
+  width:rem(16px);
+  height:rem(16px);
+  border-radius:50%;
+  background:#fff;
+  position:relative;
+
+  &:after{
+      content:"";
+      display:none;
+      position:absolute;
+      width:rem(8px);
+      height:rem(8px);
+      border-radius:50%;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      background-color: #e35028;
+  }
+}
+
+
+.order__radio-elem:checked{
+  &+.order__radio-fake{
+      &:after{
+        display: block;
+      }
+  }
+}
+
+.order__radio_checkbox {
+    .order__radio-elem:checked{
+      &+.order__radio-fake{
+          .checkmark {
+            display: none;
+          }
+      }
+  }
+}
+
+
+.order__radio-title{
+  font-size:rem(14px);
+  color:#fff;
+  margin-left:rem(10px);
+  @include ubuntu($style:light);
+}
+
+.order__radio_checkbox{
+  .order__radio-fake{
+      border-radius:rem(0px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .order__radio-elem{
+      &+.order__radio-fake{
+          &:after{
+            background:transparent;
+          }
+      }
+  }
+}
+
+.order__radio_chekbox {
+  .order__radio-elem:checked{
+    .checkmark{
+      display: inline-flex;
+    } 
+  }
+}
+
+.order__form-buttons{
+  display:flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+  margin-left:-3%;
+}
+
+.order__form-button{
+  margin-right:rem(20px);
+  border:0;
+  background:#e35028;
+  font-size:rem(13px);
+  text-transform:uppercase;
+  border-radius: rem(5px);
+  color:#fff;
+  @include ubuntu($style:medium);
+  padding:rem(10px) rem(15px);
+  cursor:pointer;
+  width:rem(97px);
+  height:rem(35px);
+  margin-left:3%;
+
+  @include tablets{
+      margin-top:rem(10px);
+      margin-right:rem(-5px);
+  }
+}
+
+.order__form-button_reset{
+  padding-left:0;
+  padding-right:0;
+  text-transform:none;
+  background:transparent;
+}
+
+.checkmark {
+    display: inline-flex;
+    width: 30px;
+    height:30px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    position: relative;
+    margin-left: rem(-5px);
+    margin-top: rem(2px);
+    @include tablets {
+      margin-left: rem(-7px);
+      margin-top: rem(6px);
+    }
+    @include phones {
+      margin-left: rem(-8px);
+      margin-top: rem(9px);
+    }
+
+  .checkmark__stem {
+    position: absolute;
+    width:rem(4px);
+    height:rem(10px);
+    background-color: $orange;
+    left:rem(11px);
+    top:rem(6px);
+  }
+
+  .checkmark__kick {
+    position: absolute;
+    width:rem(4px);
+    height:rem(4px);
+    background-color: $orange;
+    left:rem(8px);
+    top:rem(12px);
+  }
+
+}
+
+.order__radio-elem:checked {
+  .checkmark {
+    display: inline-flex;
+  }
+}

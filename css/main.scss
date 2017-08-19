@@ -4,6 +4,7 @@ $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
 $white: #fff;
+$grey: rgb(47, 50, 52);
 
 
 // Resolutions
@@ -50,6 +51,7 @@ $phones: 480px;
 @import "sections/menu.scss";
 @import "sections/team.scss";
 @import "sections/reviews.scss";
+@import "sections/order.scss";
 @import "sections/contacts.scss";
 
 

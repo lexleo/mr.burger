@@ -105,7 +105,7 @@
 
 .review__view {
   border-radius: rem(5px);
-  background-color: rgb(47, 50, 52);
+  background-color: $grey;
   padding: rem(8px) rem(12px);
   display: inline-block;
   color: #ffffff;
@@ -115,6 +115,6 @@
   font-size: rem(12px);
   transition: .3s;
   &:hover {
-    background-color: rgb(31, 33, 34);
+    background-color: darken($grey, 5%);
   }
 }
