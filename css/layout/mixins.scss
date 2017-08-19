@@ -23,3 +23,17 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 }
+
+@mixin flex($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  @if $direction == row {
+    flex-direction: row;
+  }
+
+  @if $direction == column {
+    flex-direction: column;
+  }
+}

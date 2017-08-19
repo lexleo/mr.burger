@@ -173,19 +173,8 @@
 }
 
 .order__form-button{
-  margin-right:rem(20px);
-  border:0;
-  background:#e35028;
-  font-size:rem(13px);
-  text-transform:uppercase;
-  border-radius: rem(5px);
-  color:#fff;
-  @include ubuntu($style:medium);
-  padding:rem(10px) rem(15px);
-  cursor:pointer;
-  width:rem(97px);
-  height:rem(35px);
   margin-left:3%;
+  cursor: pointer;
 
   @include tablets{
       margin-top:rem(10px);
@@ -193,11 +182,14 @@
   }
 }
 
-.order__form-button_reset{
+.order__form-button-reset{
   padding-left:0;
   padding-right:0;
   text-transform:none;
   background:transparent;
+  &:hover {
+    background:transparent;
+  }
 }
 
 .checkmark {
@@ -237,10 +229,4 @@
     top:rem(12px);
   }
 
-}
-
-.order__radio-elem:checked {
-  .checkmark {
-    display: inline-flex;
-  }
 }
