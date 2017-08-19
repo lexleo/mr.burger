@@ -14,6 +14,10 @@
   align-items: top;
   color: $white;
   font-size: rem(14px);
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .slider__image {
@@ -23,7 +27,6 @@
 .slider__pic {
   max-height: 100%;
   max-width: 100%;
-  padding: rem(50px) 0;
 }
 
 .slider__composition {
@@ -59,6 +62,14 @@
   @include gagalin;
   position: absolute;
   bottom: 0;
+  left: 0;
+  @include tablets{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: auto;
+  }
 }
 
 .slider__calories-picture {
@@ -81,12 +92,24 @@
 
 .slider__col {
   display: flex;
-  position: relative;
+  padding-bottom: rem(70px);
+  @include phones {
+    padding-bottom: rem(15px);
+  }
 }
 
 .slider__col-left {
   justify-content: center;
   align-content: center;
+  position: relative;
+  padding-top: rem(60px);
+  @include tablets {
+    justify-content: center;
+    align-items: center;
+  }
+  @include phones {
+    padding-top: rem(90px);
+  }
 }
 
 .slider__col-right {
@@ -94,17 +117,27 @@
   flex-direction: column;
   justify-content: flex-start;
   padding-left: rem(5px);
+  padding-right: rem(25px);
+  @include tablets {
+    align-items: center;
+  }
 }
 
 .section__title_burgers {
   line-height: 0.9;
   padding-top: 0;
   margin-top: 0;
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .slider__text {
   @include ubuntu(light);
   margin-top: rem(30px);
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .slider__bottom {
@@ -117,6 +150,11 @@
   height: 35px;
   width: 97px;
   margin-left: rem(25px);
+  @include phones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .slider__price {
@@ -146,6 +184,6 @@
   transform: rotate(-90deg);  
   transition: .3s;
   &:hover {
-
+    transform: translateX(5px);
   } 
 }
