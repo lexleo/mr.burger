@@ -42,7 +42,14 @@
   @include gagalin();
   position: absolute;
   top: 0;
-  left: 0;  
+  left: 0;
+  cursor: pointer;
+  &:hover {
+    background: $red;
+    &+.composition__hover {
+      display: flex;
+    }
+  }
 }
 
 .slider__burger-icon {
@@ -50,6 +57,86 @@
   width: rem(46px);
   margin-top: rem(4px);
 }
+
+
+.composition__hover {
+  background: rgba(255, 255, 255, .85);
+  border-radius: 5px;
+  display: none;
+  flex-direction: column;
+  color: $black;
+  position: absolute;
+  top: 0;
+  left: rem(90px);
+}
+
+.hover__list {
+  justify-content: center;
+  align-items: center;
+}
+
+.hover__item{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    margin-bottom:rem(13px);
+    margin-left:rem(20px);
+    &:first-child{
+        margin-top:rem(18px);
+    }
+}
+
+.hover__icon {
+  width: rem(45px);
+  height: rem(45px);
+  margin-right: rem(25px);
+}
+
+.hover__component {
+  @include ubuntu(medium);
+  margin-right:rem(67px);
+  font-size:rem(14px);
+}
+
+.hover__weigth {
+  @include ubuntu(light);
+  margin-left: auto;
+  display:flex;
+  flex-wrap:nowrap;
+  margin-right:rem(20px);
+  @include phones {
+    margin-right: rem(85px);
+  }
+}
+
+.hover__close {
+  display: none;
+  position: absolute;
+  right: 28px;
+  top: 15px;
+  width: 15px;
+  height: 15px;
+  @include phones {
+    display: inline-block;
+  }
+}
+
+.hover__close:before, .hover__close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 25px;
+  width: 4px;
+  background-color: #eb8262;
+  border-radius: rem(10px);
+}
+.hover__close:before {
+  transform: rotate(45deg);
+}
+.hover__close:after {
+  transform: rotate(-45deg);
+}
+
 
 .slider__calories {
   display: flex;
