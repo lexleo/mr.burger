@@ -19,6 +19,15 @@
 		.menu-acco__trigger-text {
 			color: $yellow;
 		}
+		.menu-acco__content {
+			max-width: rem(2000px);
+			@include tablets {
+				max-width: rem(1000px);
+			}
+			@include phones {
+				max-width: rem(500px);
+			}
+		}
 	}
 }
 
@@ -44,24 +53,29 @@
   left: 50%;
   top: 100%;
   margin-top: rem(-20px);
+	transition: .3s;
 }
 
 .menu-acco__content {
 	height: 100%;
-	float: left;
 	background: rgba(#2f3234, .93);
 	width: 0;
+	transition: .3s;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	overflow: hidden;
+	width: auto;
+	max-width: 0;
 }
 
 .menu-acco__text {
 	@include ubuntu(light);
 	font-size: rem(14px);
 	color: #fff;
-	padding: rem(60px) rem(30px);
-	width: 100%;
+	padding: rem(60px) rem(40px);
   line-height: 1.8;
-  display: none;
+	width: auto;
 }
 
 .menu-acco__tint {

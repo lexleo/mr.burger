@@ -25,11 +25,11 @@
 		}
 			
 		.team-acco__content {
-			height: 100px;
+			height: rem(100px);
 			padding-top: rem(25px);
 			padding-bottom: rem(25px);
 			@include tablets {
-				height: 180px;
+				height: rem(180px);
 			}
 		}
 		.team-acco__trigger {

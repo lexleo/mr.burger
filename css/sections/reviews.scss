@@ -54,9 +54,8 @@
 
 .review__hover {
   position: absolute;
-    top: 50%;
-    left: 50%;
-  @include flex(column);
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
   transform: translate(-50%, -50%) scale(.7);
@@ -69,6 +68,7 @@
     font-size: rem(14px);
     padding: 5% 12%;
     text-align: center;
+    @include flex(column);
     .review__shorttext {
         text-align: left;
     } 
