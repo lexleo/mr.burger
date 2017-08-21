@@ -12,6 +12,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mr. Burger</title>
   <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/plugins/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -554,7 +555,7 @@
                   </label>
                 </div>
                 <div class="order__form-row">
-                  <input type="submit" class="button order__form-button" value="Заказать">
+                  <input type="submit" class="button order__form-button" value="Заказать" data-fancybox data-src="#order-sent">
                   <input type="reset" class="button order__form-button order__form-button-reset" value="Очистить">
                 </div>
               </div>
@@ -656,7 +657,17 @@
       </nav>
     </div>
 
+    <!--Popup Message-->
+    <div class="popup" id="order-sent">
+      <div class="popup__title">Заказ отправлен</div>
+      <div class="popup__text">Ваш заказ отправлен. На указанный вами телефон будут приходить уведомления о смене статуса заказа.</div>
+      <div class="popup__bottom">
+        <a href="#" class="popup__close button">Закрыть</a>
+      </div>
+    </div>
+
   </div>
   <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/plugins/jquery.fancybox.min.js"></script>
   <script src="js/main.js"></script>
 </body>

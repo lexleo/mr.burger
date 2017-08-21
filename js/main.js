@@ -38,3 +38,19 @@ $(document).ready(function () {
   });
 
 });
+
+
+// Order button
+$(document).ready(function () {
+
+  $('.order__form-button').on('click', function(e) {
+    e.preventDefault();
+    $('[data-fancybox]').fancybox();
+  });
+
+  $('.popup__close').on('click', function (e) {
+    e.preventDefault();
+    $.fancybox.close();
+  });
+
+});
