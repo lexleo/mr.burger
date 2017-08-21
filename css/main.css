@@ -25,7 +25,7 @@
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/ubuntu-b-webfont.woff") format("woff");
+  src: url("../fonts/Ubuntu-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
 
@@ -458,25 +458,22 @@ footer {
     justify-content: center; } }
 
 .team-acco__item {
-  margin-bottom: 2.5rem; }
+  margin-bottom: 1.875rem; }
+  @media screen and (max-width: 768px) {
+    .team-acco__item {
+      text-align: center; } }
   .team-acco__item:last-child {
     margin-bottom: 0; }
   @media screen and (max-width: 768px) {
     .team-acco__item.active {
       text-align: center; } }
   .team-acco__item.active .team-acco__content {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    height: 100px;
+    padding-top: 1.5625rem;
+    padding-bottom: 1.5625rem; }
+    @media screen and (max-width: 768px) {
+      .team-acco__item.active .team-acco__content {
+        height: 180px; } }
   .team-acco__item.active .team-acco__trigger {
     color: #f9b43b; }
     .team-acco__item.active .team-acco__trigger:before {
@@ -533,9 +530,25 @@ footer {
         border-bottom: 0rem solid transparent; } }
 
 .team-acco__content {
-  padding-top: 0.875rem;
-  display: none;
-  margin-left: -10px; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 0;
+  height: 0;
+  margin-left: -10px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
   @media screen and (max-width: 768px) {
     .team-acco__content {
       -webkit-box-orient: vertical;
