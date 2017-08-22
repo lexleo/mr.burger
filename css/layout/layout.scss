@@ -37,10 +37,20 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
-  overflow: hidden;
+  height: 100%;
+  overflow: hidden; 
 }
 
+.maincontent {
+  height: 100%;
+  min-height: 650px;
+  transition: transform 1s;
+  will-change: transform;
+
+  @include tablets {
+    min-height: auto;
+  }
+}
 
 // Reset tag styles
 h1,

@@ -68,8 +68,21 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   overflow: hidden; }
+
+.maincontent {
+  height: 100%;
+  min-height: 650px;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  will-change: transform; }
+  @media screen and (max-width: 768px) {
+    .maincontent {
+      min-height: auto; } }
 
 h1,
 h2,
