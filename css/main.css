@@ -230,6 +230,9 @@ footer {
     text-decoration: underline; }
 
 .popup-menu {
+  display: none; }
+
+.popup-menu__wrapper {
   background: rgba(47, 50, 52, 0.99);
   position: absolute;
   height: 100vh;
@@ -238,7 +241,10 @@ footer {
   left: 0;
   bottom: 0;
   right: 0;
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -861,6 +867,10 @@ footer {
   font-family: 'Ubuntu', Helvetica, sans-serif;
   font-weight: 300; }
 
+.map {
+  width: 100%;
+  height: 100%; }
+
 .heading {
   background: url("../images/heading_bg.jpg") center center no-repeat;
   background-size: cover;
@@ -1127,7 +1137,6 @@ footer {
   height: 5.625rem;
   background: #F08C33;
   border-radius: 8px;
-  overflow: hidden;
   font-family: 'Gagalin-Regular', Helvetica, sans-serif;
   position: absolute;
   top: 0;
@@ -1135,11 +1144,12 @@ footer {
   cursor: pointer; }
   .slider__composition:hover {
     background: #e35028; }
-    .slider__composition:hover + .composition__hover {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex; }
+
+.slider__composition:hover .composition__hover {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .slider__burger-icon {
   height: 2.875rem;
@@ -1158,7 +1168,8 @@ footer {
   color: #2f3234;
   position: absolute;
   top: 0;
-  left: 5.625rem; }
+  left: 5.625rem;
+  z-index: 999; }
 
 .hover__list {
   -webkit-box-pack: center;
@@ -1267,6 +1278,9 @@ footer {
   width: 5.625rem;
   height: 5.625rem;
   opacity: .5;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
   font-family: 'Gagalin-Regular', Helvetica, sans-serif;
   position: absolute;
   bottom: 0;
@@ -1278,6 +1292,8 @@ footer {
       right: 0;
       left: auto;
       bottom: auto; } }
+  .slider__calories:hover {
+    opacity: .7; }
 
 .slider__calories-picture {
   display: -webkit-box;
@@ -1423,6 +1439,10 @@ footer {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s; }
+  .slider__prev-arrow:hover {
+    -webkit-transform: translateX(-5px) rotate(90deg);
+    -ms-transform: translateX(-5px) rotate(90deg);
+    transform: translateX(-5px) rotate(90deg); }
 
 .slider__next-arrow {
   position: absolute;
@@ -1435,9 +1455,9 @@ footer {
   -o-transition: .3s;
   transition: .3s; }
   .slider__next-arrow:hover {
-    -webkit-transform: translateX(5px);
-    -ms-transform: translateX(5px);
-    transform: translateX(5px); }
+    -webkit-transform: translateX(5px) rotate(-90deg);
+    -ms-transform: translateX(5px) rotate(-90deg);
+    transform: translateX(5px) rotate(-90deg); }
 
 .menu {
   background: url("../images/menu_bg.jpg") 50% no-repeat;
@@ -1918,8 +1938,3 @@ footer {
     background-color: #e45028;
     left: 0.5rem;
     top: 0.75rem; }
-
-.map {
-  background: url("../images/contacts_bg.jpg") center center no-repeat;
-  background-size: cover;
-  position: relative; }

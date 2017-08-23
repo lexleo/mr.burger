@@ -60,7 +60,11 @@ $(document).ready(function () {
 $(function () {
   var sections = $('.section'),
     display = $('.maincontent'),
-    isScroll = false;
+    menu = $('.popup-menu'),
+    link = $('.hamburger-menu-link'),
+    close = $('.popup-menu__close');
+  isScroll = false;
+
 
   var md = new MobileDetect(window.navigator.userAgent);
   isMobile = md.mobile();
@@ -70,6 +74,7 @@ $(function () {
     if (isScroll) return;
 
     isScroll = true;
+
 
     var position = (sectionEq * -100) + '%';
 
@@ -112,7 +117,7 @@ $(function () {
     }
   };
 
-
+  //scroll
   $('.wrapper').on({
     wheel: function (e) {
 
@@ -129,12 +134,11 @@ $(function () {
     }
   });
 
-
-
-
+  // arrow keys
   $(document).on('keydown', function (e) {
 
     var section = defineSections(sections);
+
 
     switch (e.keyCode) {
       case 40: //up
@@ -152,6 +156,7 @@ $(function () {
 
   $('[data-scroll-to]').on('click', function (e) {
     e.preventDefault();
+    menu.hide();
 
     var sectionNum = parseInt($(this).attr('data-scroll-to'));
 
@@ -165,5 +170,17 @@ $(function () {
       }
     });
   }
+
+
+  link.on('click', function (e) {
+    e.preventDefault();
+    menu.show();
+  });
+
+  close.on('click', function (e) {
+    e.preventDefault();
+    menu.hide();
+  });
+
 
 });

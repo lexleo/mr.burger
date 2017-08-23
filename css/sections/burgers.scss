@@ -38,7 +38,6 @@
   height: rem(90px);
   background: #F08C33;
   border-radius: 8px;
-  overflow: hidden;
   @include gagalin();
   position: absolute;
   top: 0;
@@ -46,10 +45,14 @@
   cursor: pointer;
   &:hover {
     background: $red;
-    &+.composition__hover {
-      display: flex;
-    }
+    // &+.composition__hover {
+    //   display: flex;
+    // }
   }
+}
+
+.slider__composition:hover .composition__hover {
+  display: flex;
 }
 
 .slider__burger-icon {
@@ -68,6 +71,7 @@
   position: absolute;
   top: 0;
   left: rem(90px);
+  z-index: 999;
 }
 
 .hover__list {
@@ -147,6 +151,7 @@
   width: rem(90px);
   height: rem(90px);
   opacity: .5;
+  transition: .3s;
   @include gagalin;
   position: absolute;
   bottom: 0;
@@ -157,6 +162,9 @@
     right: 0;
     left: auto;
     bottom: auto;
+  }
+  &:hover {
+    opacity: .7;
   }
 }
 
@@ -261,7 +269,7 @@
   transform: rotate(90deg);
   transition: .3s;
   &:hover {
-
+    transform: translateX(-5px) rotate(90deg);
   }
 }
 
@@ -272,6 +280,6 @@
   transform: rotate(-90deg);  
   transition: .3s;
   &:hover {
-    transform: translateX(5px);
+    transform: translateX(5px) rotate(-90deg);
   } 
 }

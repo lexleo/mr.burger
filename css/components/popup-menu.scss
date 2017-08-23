@@ -1,4 +1,8 @@
 .popup-menu {
+  display: none;
+}
+
+.popup-menu__wrapper {
   background: rgba(47, 50, 52, .99);
   position: absolute;
   height: 100vh;
@@ -7,11 +11,13 @@
   left: 0;
   bottom: 0;
   right: 0;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
 }
+
+
 
 .popup-menu__logo {
   height: rem(80px);
@@ -76,6 +82,7 @@
   background-color: #c1c2c2;
   border-radius: rem(10px);
 }
+
 .popup-menu__close:before {
   transform: rotate(45deg);
 }
