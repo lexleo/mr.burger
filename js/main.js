@@ -45,7 +45,26 @@ $(document).ready(function () {
 
   $('.order__form-button').on('click', function (e) {
     e.preventDefault();
-    $('[data-fancybox]').fancybox();
+    
+    var name = $('[name=name]').val(),
+      street = $('[name=street]').val(),
+      home = $('[name=home]').val(),
+      phone = $('[name=phone]').val(),
+      order = $('.order__form-button'),
+      missed = $('#data-missed>.popup__text');
+    
+
+    if (name.length && phone.length && street.length && home.length) {
+      $.fancybox.open({src: "#order-sent"});
+    } else {
+      var missedData = [];
+      if (!name.length) missedData.push('Имя');
+      if (!phone.length) missedData.push('Контактный телефон');
+      if (!street.length || !home.length) missedData.push('Адрес доставки');
+      missed.text('Вы забыли указать необходимые данные: ' + missedData.join(', '));     
+      $.fancybox.open({src: "#data-missed"});
+    }
+  
   });
 
   $('.popup__close').on('click', function (e) {

@@ -12,13 +12,6 @@ $(function () {
 
     myMap.behaviors.disable('scrollZoom');
 
-    // var myPlacemark = new ymaps.Placemark([59.91817154482064, 30.30557799999997], {}, {
-    //   iconLayout: 'default#image',
-    //   iconImageHref: '../images/icons/map-marker.svg',
-    //   iconImageSize: [46, 57],
-    //   iconImageOffset: [-26, -52]
-    // });
-
     var coords = [
         [59.94554327989287, 30.38935262114668],
         [59.91142323563909, 30.50024587065841],
