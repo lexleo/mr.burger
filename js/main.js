@@ -45,26 +45,30 @@ $(document).ready(function () {
 
   $('.order__form-button').on('click', function (e) {
     e.preventDefault();
-    
+
     var name = $('[name=name]').val(),
       street = $('[name=street]').val(),
       home = $('[name=home]').val(),
       phone = $('[name=phone]').val(),
       order = $('.order__form-button'),
       missed = $('#data-missed>.popup__text');
-    
+
 
     if (name.length && phone.length && street.length && home.length) {
-      $.fancybox.open({src: "#order-sent"});
+      $.fancybox.open({
+        src: "#order-sent"
+      });
     } else {
       var missedData = [];
       if (!name.length) missedData.push('Имя');
       if (!phone.length) missedData.push('Контактный телефон');
       if (!street.length || !home.length) missedData.push('Адрес доставки');
-      missed.text('Вы забыли указать необходимые данные: ' + missedData.join(', '));     
-      $.fancybox.open({src: "#data-missed"});
+      missed.text('Вы забыли указать необходимые данные: ' + missedData.join(', '));
+      $.fancybox.open({
+        src: "#data-missed"
+      });
     }
-  
+
   });
 
   $('.popup__close').on('click', function (e) {
@@ -200,6 +204,88 @@ $(function () {
     e.preventDefault();
     menu.hide();
   });
+
+
+});
+
+
+//Burgers Slider 
+
+$(function () {
+
+  var items = $('.slider__item'),
+    display = $('.slider__list'),
+    isSlide = false;
+
+  var slideTo = function (slideEq) {
+
+    if (isSlide) return;
+    isSlide = true;
+
+    var position = (slideEq * -100) + '%';
+
+    display.css({
+      'transform': 'translateX(' + position + ')',
+      'webkit-transform': 'translateX(' + position + ')'
+    });
+
+    items.eq(slideEq).addClass('active')
+      .siblings().removeClass('active');
+
+    setTimeout(function () {
+      isSlide = false;
+    }, 500);
+
+  };
+
+  var defineSlides = function (items) {
+    var activeSlide = items.filter('.active');
+    return {
+      activeSlide: activeSlide,
+      nextSlide: activeSlide.next(),
+      prevSlide: activeSlide.prev()
+    }
+  };
+
+  var slide = function (direction) {
+    var slide = defineSlides(items);
+
+    if (direction == 'next') {
+      
+      if (!slide.nextSlide.length) {
+        items.first().addClass('active')
+        .siblings().removeClass('active');
+        slideTo(items.first().index());  
+      }
+
+      slideTo(slide.nextSlide.index());
+    }
+
+    if (direction == 'prev') {
+      
+      if (!slide.prevSlide.length) {
+        items.last().addClass('active')
+        .siblings().removeClass('active');
+        slideTo(items.last().index());
+      }
+
+      slideTo(slide.prevSlide.index());
+    }
+
+
+
+  };
+
+  $('.slider__next-arrow').on('click', function (e) {
+    e.preventDefault();
+    slide('next');
+  });
+
+  $('.slider__prev-arrow').on('click', function (e) {
+    e.preventDefault();
+    slide('prev');
+  });
+
 
 
 });

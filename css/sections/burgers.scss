@@ -20,11 +20,51 @@
   }
 }
 
+.slider__col {
+  padding-bottom: rem(70px);
+  @include phones {
+    padding-bottom: rem(15px);
+  }
+}
+
+.slider__col-left {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  padding-top: rem(50px);
+  // border: 1px solid red;
+  @include tablets {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: rem(30px);
+  }
+  @include phones {
+    padding-top: rem(90px);
+  }
+}
+
+.slider__col-right {
+  display: flex;
+  max-width: rem(450px);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: rem(10px);
+  padding-right: rem(25px);
+  @include tablets {
+    align-items: center;
+    padding-left: rem(20px);
+    padding-right: rem(20px);
+  }
+}
+
 .slider__display {
-  @include flex;
-  // overflow: hidden;
-  border: 1px solid black;
-  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  // border: 1px solid black;
+  max-width: 471px;
 }
 
 .slider__list {
@@ -32,9 +72,13 @@
   white-space: nowrap;
   font-size: 0;
   list-style: none;
-  transform: translateX(-400%);
+  transform: translateX(0%);
+  transition: transform .5s;
+  will-change: transform;
   padding: 0;
   margin: 0;
+  max-width: 100%;
+  max-height: 100%;
 } 
 
 .slider__item {
@@ -43,6 +87,16 @@
   display: inline-flex;
   justify-content: center;
   text-align: center;
+  padding: 0;
+  margin: 0;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.slider__pic-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider__pic {
@@ -207,38 +261,6 @@
   font-size: rem(20px);
 }
 
-.slider__col {
-  display: flex;
-  padding-bottom: rem(70px);
-  @include phones {
-    padding-bottom: rem(15px);
-  }
-}
-
-.slider__col-left {
-  justify-content: center;
-  align-content: center;
-  position: relative;
-  padding-top: rem(60px);
-  @include tablets {
-    justify-content: center;
-    align-items: center;
-  }
-  @include phones {
-    padding-top: rem(90px);
-  }
-}
-
-.slider__col-right {
-  max-width: rem(450px);
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-left: rem(5px);
-  padding-right: rem(25px);
-  @include tablets {
-    align-items: center;
-  }
-}
 
 .section__title_burgers {
   line-height: 0.9;
