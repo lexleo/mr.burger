@@ -215,12 +215,28 @@ $(function () {
 
   var items = $('.slider__item'),
     display = $('.slider__list'),
+    descs = $('.desc__item'),
+    texts = $('.slider__text'),
+    titles = $('.section__title_burgers'),
+    prices = $('.price__item'),
     isSlide = false;
+
+
+  var defineSlides = function (items) {
+    var activeSlide = items.filter('.active');
+    return {
+      activeSlide: activeSlide,
+      nextSlide: activeSlide.next(),
+      prevSlide: activeSlide.prev()
+    }
+  };
 
   var slideTo = function (slideEq) {
 
     if (isSlide) return;
     isSlide = true;
+
+    switchDesc(slideEq);
 
     var position = (slideEq * -100) + '%';
 
@@ -232,20 +248,14 @@ $(function () {
     items.eq(slideEq).addClass('active')
       .siblings().removeClass('active');
 
+
     setTimeout(function () {
       isSlide = false;
     }, 500);
 
   };
 
-  var defineSlides = function (items) {
-    var activeSlide = items.filter('.active');
-    return {
-      activeSlide: activeSlide,
-      nextSlide: activeSlide.next(),
-      prevSlide: activeSlide.prev()
-    }
-  };
+
 
   var slide = function (direction) {
     var slide = defineSlides(items);
@@ -255,7 +265,12 @@ $(function () {
       if (!slide.nextSlide.length) {
         items.first().addClass('active')
         .siblings().removeClass('active');
-        slideTo(items.first().index());  
+        descs.first().addClass('active')
+        .siblings().removeClass('active');
+        prices.first().addClass('active')
+        .siblings().removeClass('active');        
+
+        slideTo(items.first().index()); 
       }
 
       slideTo(slide.nextSlide.index());
@@ -266,15 +281,44 @@ $(function () {
       if (!slide.prevSlide.length) {
         items.last().addClass('active')
         .siblings().removeClass('active');
+        descs.last().addClass('active')
+        .siblings().removeClass('active');
+        prices.last().addClass('active')
+        .siblings().removeClass('active');        
+
+
         slideTo(items.last().index());
       }
 
       slideTo(slide.prevSlide.index());
     }
 
-
-
   };
+
+  var switchDesc = function(slideEq) {
+    var activeSlideEq = defineSlides(items).activeSlide.index();
+
+    titles.removeClass('exit');
+    titles.removeClass('enter');
+    texts.removeClass('exit');
+    texts.removeClass('enter');
+    prices.removeClass('active');
+
+
+    texts.eq(activeSlideEq).addClass('exit');
+    titles.eq(activeSlideEq).addClass('exit');
+    
+    prices.eq(slideEq).addClass('active');
+    
+    setTimeout(function () {
+      descs.eq(activeSlideEq).removeClass('active');
+      descs.eq(slideEq).addClass('active');
+      texts.eq(slideEq).addClass('enter');
+      titles.eq(slideEq).addClass('enter');
+    }, 350);
+ 
+  }
+  
 
   $('.slider__next-arrow').on('click', function (e) {
     e.preventDefault();
