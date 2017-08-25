@@ -51,23 +51,29 @@ $(document).ready(function () {
       home = $('[name=home]').val(),
       phone = $('[name=phone]').val(),
       order = $('.order__form-button'),
-      missed = $('#data-missed>.popup__text');
+      popup = $('.popup'),
+      title = $('.popup>.popup__title'),
+      text = $('.popup>.popup__text');
 
 
     if (name.length && phone.length && street.length && home.length) {
-      $.fancybox.open({
-        src: "#order-sent"
-      });
+
+      title.text('Заказ отправлен');
+      text.text('Ваш заказ отправлен. На указанный вами телефон будут приходить уведомления о смене статуса заказа.');
+
     } else {
+
       var missedData = [];
       if (!name.length) missedData.push('Имя');
       if (!phone.length) missedData.push('Контактный телефон');
       if (!street.length || !home.length) missedData.push('Адрес доставки');
-      missed.text('Вы забыли указать необходимые данные: ' + missedData.join(', '));
-      $.fancybox.open({
-        src: "#data-missed"
-      });
+      text.text('Вы забыли указать необходимые данные: ' + missedData.join(', '));
+      title.text('Неполные данные');
     }
+
+    $.fancybox.open({
+      src: "#popup"
+    });
 
   });
 
@@ -195,13 +201,13 @@ $(function () {
   }
 
 
-  var switchColors = function(sectionEq) {
-    
-    const blackened = [1,7];
-    
+  var switchColors = function (sectionEq) {
+
+    const blackened = [1, 7];
+
     var dots = $('.fixed-menu__link');
 
-    if ($.inArray(sectionEq, blackened) !=-1) {
+    if ($.inArray(sectionEq, blackened) != -1) {
       dots.addClass('fixed-menu__link--black');
     } else {
       dots.removeClass('fixed-menu__link--black');
@@ -275,30 +281,30 @@ $(function () {
     var slide = defineSlides(items);
 
     if (direction == 'next') {
-      
+
       if (!slide.nextSlide.length) {
         items.first().addClass('active')
-        .siblings().removeClass('active');
+          .siblings().removeClass('active');
         descs.first().addClass('active')
-        .siblings().removeClass('active');
+          .siblings().removeClass('active');
         prices.first().addClass('active')
-        .siblings().removeClass('active');        
+          .siblings().removeClass('active');
 
-        slideTo(items.first().index()); 
+        slideTo(items.first().index());
       }
 
       slideTo(slide.nextSlide.index());
     }
 
     if (direction == 'prev') {
-      
+
       if (!slide.prevSlide.length) {
         items.last().addClass('active')
-        .siblings().removeClass('active');
+          .siblings().removeClass('active');
         descs.last().addClass('active')
-        .siblings().removeClass('active');
+          .siblings().removeClass('active');
         prices.last().addClass('active')
-        .siblings().removeClass('active');        
+          .siblings().removeClass('active');
 
 
         slideTo(items.last().index());
@@ -309,7 +315,7 @@ $(function () {
 
   };
 
-  var switchDesc = function(slideEq) {
+  var switchDesc = function (slideEq) {
     var activeSlideEq = defineSlides(items).activeSlide.index();
 
     titles.removeClass('exit');
@@ -321,18 +327,18 @@ $(function () {
 
     texts.eq(activeSlideEq).addClass('exit');
     titles.eq(activeSlideEq).addClass('exit');
-    
+
     prices.eq(slideEq).addClass('active');
-    
+
     setTimeout(function () {
       descs.eq(activeSlideEq).removeClass('active');
       descs.eq(slideEq).addClass('active');
       texts.eq(slideEq).addClass('enter');
       titles.eq(slideEq).addClass('enter');
     }, 350);
- 
+
   }
-  
+
 
   $('.slider__next-arrow').on('click', function (e) {
     e.preventDefault();
@@ -345,5 +351,27 @@ $(function () {
   });
 
 
+
+});
+
+
+//Full Review
+$(function () {
+
+  $('.review__view').on('click', function (e) {
+    var $this = $(this),
+      review = $this.parent().siblings('.review__shorttext'),
+      name = $this.parent().siblings('.review__title'),
+      popup = $('.popup'),
+      title = $('.popup>.popup__title'),
+      text = $('.popup>.popup__text');
+
+      title.text(name.text());
+      text.text(review.text());
+
+    $.fancybox.open({
+      src: "#popup"
+    });
+  });
 
 });

@@ -3,6 +3,7 @@
     max-width: 700px;
 }
 
+
 .popup__bottom {
     display: flex;
     justify-content: center;
@@ -20,4 +21,8 @@
 
 .popup__text {
     @include ubuntu();
+}
+
+.fancybox-slide>* {
+    border-radius: 8px;
 }
