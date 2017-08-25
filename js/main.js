@@ -98,7 +98,6 @@ $(function () {
 
     isScroll = true;
 
-
     var position = (sectionEq * -100) + '%';
 
     display.css({
@@ -113,6 +112,7 @@ $(function () {
       isScroll = false;
       $('.fixed-menu__item').eq(sectionEq).addClass('active')
         .siblings().removeClass('active');
+      switchColors(sectionEq);
     }, 1000);
 
   }
@@ -192,6 +192,20 @@ $(function () {
         scrollTo(direction);
       }
     });
+  }
+
+
+  var switchColors = function(sectionEq) {
+    
+    const blackened = [1,7];
+    
+    var dots = $('.fixed-menu__link');
+
+    if ($.inArray(sectionEq, blackened) !=-1) {
+      dots.addClass('fixed-menu__link--black');
+    } else {
+      dots.removeClass('fixed-menu__link--black');
+    }
   }
 
 
