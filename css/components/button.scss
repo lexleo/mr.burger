@@ -1,4 +1,4 @@
-.btn {
+.button {
 	background: $orange;
 	font-size: rem(13px);
 	text-transform: uppercase;
@@ -6,6 +6,7 @@
 	text-align: center;
 	text-decoration: none;
 	border-radius: rem(5px);
+	border: none;
 	padding: rem(9px) rem(16px);
 	transition: .5s;
 	@include ubuntu(medium);

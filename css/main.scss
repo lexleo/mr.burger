@@ -4,6 +4,7 @@ $yellow: #f9b43b;
 $black: #2f3234;
 $red: #e35028;
 $white: #fff;
+$grey: rgb(47, 50, 52);
 
 
 // Resolutions
@@ -26,6 +27,7 @@ $phones: 480px;
 @import "layout/mixins";
 @import "layout/layout";
 @import "layout/section";
+@import "layout/animations";
 
 
 //Commons
@@ -34,6 +36,7 @@ $phones: 480px;
 
 //Components
 @import "components/header";
+@import "components/popup-menu";
 @import "components/pagination";
 @import "components/hamburger-menu";
 @import "components/button";
@@ -41,15 +44,21 @@ $phones: 480px;
 @import "components/menu-accordeon";
 @import "components/footer";
 @import "components/socials";
+@import "components/popup-msg";
+@import "components/map";
+
+
 
 
 
 //Sections
 @import "sections/heading.scss";
 @import "sections/best.scss";
+@import "sections/burgers.scss";
 @import "sections/menu.scss";
 @import "sections/team.scss";
 @import "sections/reviews.scss";
+@import "sections/order.scss";
 @import "sections/contacts.scss";
 
 

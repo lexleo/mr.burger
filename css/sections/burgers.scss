@@ -1,0 +1,343 @@
+.burgers {
+  background-image: linear-gradient(to bottom, #f9b43b 24%, #eb8c38 48%, #f9b43b 74%);
+}
+
+.container__burgers {
+  max-width: rem(1100px);
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  color: $white;
+  font-size: rem(14px);
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.slider__col {
+  padding-bottom: rem(70px);
+  @include phones {
+    padding-bottom: rem(15px);
+  }
+}
+
+.slider__col-left {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  padding-top: rem(50px);
+  // border: 1px solid red;
+  @include tablets {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: rem(30px);
+  }
+  @include phones {
+    padding-top: rem(90px);
+  }
+}
+
+.slider__col-right {
+  display: flex;
+  max-width: rem(450px);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: rem(10px);
+  padding-right: rem(25px);
+  @include tablets {
+    align-items: center;
+    padding-left: rem(20px);
+    padding-right: rem(20px);
+  }
+}
+
+.slider__display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  // border: 1px solid black;
+  max-width: 471px;
+}
+
+.slider__list {
+  height: rem(345px);
+  white-space: nowrap;
+  font-size: 0;
+  list-style: none;
+  transform: translateX(0%);
+  transition: transform .35s;
+  will-change: transform;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+} 
+
+.slider__item {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.slider__pic-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__pic {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.slider__composition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: rem(90px); 
+  height: rem(90px);
+  background: #F08C33;
+  border-radius: 8px;
+  @include gagalin();
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  &:hover {
+    background: $red;
+    // &+.composition__hover {
+    //   display: flex;
+    // }
+  }
+}
+
+.slider__composition:hover .composition__hover {
+  display: flex;
+}
+
+.slider__burger-icon {
+  height: rem(46px);
+  width: rem(46px);
+  margin-top: rem(4px);
+}
+
+
+.composition__hover {
+  background: rgba(255, 255, 255, .85);
+  border-radius: 5px;
+  display: none;
+  flex-direction: column;
+  color: $black;
+  position: absolute;
+  top: 0;
+  left: rem(90px);
+  z-index: 999;
+}
+
+.hover__list {
+  justify-content: center;
+  align-items: center;
+}
+
+.hover__item{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    margin-bottom:rem(13px);
+    margin-left:rem(20px);
+    &:first-child{
+        margin-top:rem(18px);
+    }
+}
+
+.hover__icon {
+  width: rem(45px);
+  height: rem(45px);
+  margin-right: rem(25px);
+}
+
+.hover__component {
+  @include ubuntu(medium);
+  margin-right:rem(67px);
+  font-size:rem(14px);
+}
+
+.hover__weigth {
+  @include ubuntu(light);
+  margin-left: auto;
+  display:flex;
+  flex-wrap:nowrap;
+  margin-right:rem(20px);
+  @include phones {
+    margin-right: rem(85px);
+  }
+}
+
+.hover__close {
+  display: none;
+  position: absolute;
+  right: 28px;
+  top: 15px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  @include phones {
+    display: inline-block;
+  }
+}
+
+.hover__close:before, .hover__close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 25px;
+  width: 4px;
+  background-color: #eb8262;
+  border-radius: rem(10px);
+}
+.hover__close:before {
+  transform: rotate(45deg);
+}
+.hover__close:after {
+  transform: rotate(-45deg);
+}
+
+
+.slider__calories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: rem(90px);
+  height: rem(90px);
+  opacity: .5;
+  transition: .3s;
+  @include gagalin;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  @include tablets{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: auto;
+  }
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.slider__calories-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.slider__calories-icon {
+  width: rem(60px);
+  height: rem(60px);
+}
+
+.slider__calories-number {
+  position: absolute;
+  top: 40%;
+  font-size: rem(20px);
+}
+
+
+.section__title_burgers {
+  line-height: 0.9;
+  padding-top: 0;
+  margin-top: 0;
+  @include tablets {
+    text-align: center;
+  }
+}
+
+.slider__text {
+  @include ubuntu(light);
+  margin-top: rem(30px);
+  @include tablets {
+    text-align: center;
+  }
+}
+
+.slider__bottom {
+  display: flex;
+  justify-content: left;
+  align-items: baseline;
+}
+
+.slider__button {
+  height: 35px;
+  width: 97px;
+  margin-left: rem(25px);
+  @include phones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.slider__price {
+  @include gagalin;
+  font-size: rem(30px);
+  color: $red;
+  .slider__price-number {
+    font-size: 72px;
+  }
+}
+
+.slider__prev-arrow {
+  position: absolute;
+  top: 50%;
+  left: -3%;
+  transform: rotate(90deg);
+  transition: .3s;
+  &:hover {
+    transform: translateX(-5px) rotate(90deg);
+  }
+}
+
+.slider__next-arrow {
+  position: absolute;
+  top: 50%;
+  right: -3%;
+  transform: rotate(-90deg);  
+  transition: .3s;
+  &:hover {
+    transform: translateX(5px) rotate(-90deg);
+  } 
+}
+
+.price__item {
+  display: none;
+  &.active {
+    display: inline;
+  }
+}
+
+.desc__item {
+  display: none;
+  transition: .5s;
+  &.active {
+    display: inline;
+  }
+}
