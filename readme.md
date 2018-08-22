@@ -1,3 +1,3 @@
 ![MAIN PAGE](/images/github/main_page.png)
 
-Демо: https://lexleo.github.io/mr.burger/  
+Site: https://lexleo.github.io/mr.burger/  
